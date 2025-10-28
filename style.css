@@ -28,15 +28,30 @@ header{
     background-color: #F7F7F7;
     position: fixed;
     top: 0; left: 0; right: 0;
-    padding: 1.5rem 2%;
     z-index: 999; /*Fuerza a que se coloque en una capa diferente*/
     box-shadow: 0.5rem 0.2rem rgba(0, 0, 0, .1);
+}
+
+header .banner{
+    text-align: center;
+    background-color: #c0a0ff;
+    color: #2C2C2C;
+    font-size: 1.5rem;
+    font-weight: 550;
+    font-family: "Cormorant Garamond";
+    padding: 0.3rem;
+}
+
+header .banner:hover{
+    background-color: #A7C7E7;
+    cursor: pointer;
 }
 
 header .header-up{
     display: grid;
     grid-template-columns: repeat(3, 1fr) 1rem;
     justify-content: space-evenly;
+    padding: 1rem;
 }
 
 header .header-up .logo{
@@ -57,24 +72,6 @@ header .header-up .icons a{
 
 header .header-up .icons a:hover, .icons a:active{
     border-bottom: 0.5rem solid #C6B5E9;
-}
-
-header .header-up form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-header .header-up form img{
-    height: 1.40rem; width: auto;
-}
-
-header .header-up form button{
-    border-right: .1rem solid #2C2C2C;
-    border-top: .1rem solid #2C2C2C;
-    border-bottom: .1rem solid #2C2C2C;
-    cursor: pointer;
 }
 
 header .header-up input{
@@ -99,6 +96,7 @@ header .navbar ul{
 header .navbar a{
     color: #6B5A73;
     border: 0.2rem solid #A7C7E7;
+    background-color: #A7C7E7;
     padding: 0 2em;
     display: flex;
     align-items: center;
@@ -107,8 +105,9 @@ header .navbar a{
 }
 
 header .navbar a:hover{
-    background-color: #A7C7E7;
+    background-color: #C6B5E9;
     border: solid #6B5A73 0.2rem;
+    color: #F2E6D8;
 }
 
 .home{
@@ -135,6 +134,13 @@ header .navbar a:hover{
     line-height: 1.5;
     color: #6B5A73;
 }
+
+/*SECCION DE ICONO DE WHATSAPP*/
+ .home .whatsapp img{
+    top: 500; left: 0; right: 500;
+    position: fixed;
+    z-index: 999; /*Fuerza a que se coloque en una capa diferente*/
+ }
 
 /*SECCION DE PRODUCTOS*/
 
@@ -182,6 +188,22 @@ header .navbar a:hover{
 .novedades .box-container .box .img:hover{
     transform: scale(1.05);
 }
+
+/*SECCION DE PROMOS*/
+.promos .promo{
+    text-align: center;
+}
+
+.promos .promo img{
+    width: 1000px; height: 450px;
+}
+
+.promos .promo img:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    outline: 0.5rem solid #C6B5E9;
+}
+
 
 /*SECCION DE MEDIDAS*/
 
@@ -275,7 +297,6 @@ header .navbar a:hover{
     padding: 0.5rem;
     padding-left: 0.9rem;
     padding-right: 0.9rem;
-    text-align: center;
     cursor: pointer;
 }
 

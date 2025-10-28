@@ -93,27 +93,29 @@ header .navbar ul{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 1.5rem;
 }
 
 header .navbar a{
-    background-color: #A7C7E7;
-    outline: 0.1rem solid #F7F7F7;
-    padding: 0 1.5rem;
+    color: #6B5A73;
+    border: 0.2rem solid #A7C7E7;
+    padding: 0 2em;
     display: flex;
     align-items: center;
-    font-size: 19px;
+    font-size: 25px;
+    margin-left: 1rem;
 }
 
 header .navbar a:hover{
-    background-color: #C6B5E9;
-    color: #F2E6D8;
+    background-color: #A7C7E7;
+    border: solid #6B5A73 0.2rem;
 }
 
 /*HERO DE CATEGORIA*/
 
 .hero-product{
     background: url(images/HeroAcolchados.png) no-repeat center center/cover; 
-    height: 500px;
+    height: 620px;
     display: flex;
     align-items: center;
     padding-left: 5%;
@@ -124,7 +126,7 @@ header .navbar a:hover{
     font-family: "Cormorant Garamond";
     color: #2C2C2C;
     padding: 10px 20px;
-    background-color: rgba(167, 199, 231, 1);
+    /*background-color: rgba(167, 199, 231, 1);*/
 }
 
 /*PRODUCTOS*/

@@ -97,8 +97,8 @@ header .navbar ul{
 }
 
 header .navbar a{
-    background-color: #A7C7E7;
-    outline: 0.2rem solid #C6B5E9;
+    color: #6B5A73;
+    border: 0.2rem solid #A7C7E7;
     padding: 0 2em;
     display: flex;
     align-items: center;
@@ -107,8 +107,8 @@ header .navbar a{
 }
 
 header .navbar a:hover{
-    background-color: #C6B5E9;
-    color: #F2E6D8;
+    background-color: #A7C7E7;
+    border: solid #6B5A73 0.2rem;
 }
 
 .home{
@@ -242,7 +242,6 @@ header .navbar a:hover{
 
 .nosotros-info .imagen {
     float: left; 
-    margin-left: 50px;
     margin-right: 40px;
     width: 50%;
     max-width: 700px;
@@ -266,6 +265,24 @@ header .navbar a:hover{
     font-size: 2rem;
     line-height: 1.8;
     margin-bottom: 15px;
+}
+
+.nosotros-info .button{
+    color: #6B5A73;
+    border: 0.2rem solid #A7C7E7;
+    font-size: 2.2rem;
+    margin-left: 1rem;
+    padding: 0.5rem;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.nosotros-info .button:hover {
+    cursor: pointer;
+    color: #A7C7E7;
+    border: solid #6B5A73 0.2rem;
 }
 
 
@@ -362,17 +379,18 @@ footer .btn{
     background-color: rgba(0, 0, 0, 0);
     border: .1rem solid #2C2C2C;
     margin-left: 1rem;
-    padding: 0.5rem;;
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
+    padding: 0.5rem;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
     text-align: center;
     cursor: pointer;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
 }
 
 footer .btn:hover{
-    background-color: #C6B5E9;
-    color: #F2E6D8;
+    background-color: #F2E6D8;
+    color: #6B5A73;
+    border: .1rem solid #6B5A73;
 }
 
 footer .iconos-footer{
@@ -413,7 +431,7 @@ footer .copyright{
 /*MEDIA QUERY*/
 
 @media (max-width:1400px){
-    
+
     footer .menu-footer{
         display: grid;
         grid-template-columns: repeat(3, 1fr) 30rem;
@@ -430,6 +448,7 @@ footer .copyright{
     html{
         font-size: 55%;
     }
+
     header{
         padding: 1rem 2%;
     }

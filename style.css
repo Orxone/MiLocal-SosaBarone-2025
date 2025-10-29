@@ -45,6 +45,7 @@ header .banner{
 header .banner:hover{
     background-color: #A7C7E7;
     cursor: pointer;
+    color: #F2E6D8;
 }
 
 header .header-up{
@@ -136,11 +137,37 @@ header .navbar a:hover{
 }
 
 /*SECCION DE ICONO DE WHATSAPP*/
- .home .whatsapp img{
-    top: 500; left: 0; right: 500;
-    position: fixed;
-    z-index: 999; /*Fuerza a que se coloque en una capa diferente*/
- }
+.whatsapp-flotante {
+    position: fixed; 
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; 
+    
+    /*Para que se vea como un círculo el contenedor*/
+    width: 60px; 
+    height: 60px;
+    padding: 0;
+    
+    border-radius: 50%; /*Para que sea un círculo perfecto*/
+    
+    /*Centra el ícono dentro del botón*/
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    background-color: #F7F7F7;
+}
+
+.whatsapp-bubble {
+    width: 42px; 
+    height: 44px;
+}
+
+.whatsapp-flotante:hover {
+    background-color: #c0a0ff;
+    transform: scale(1.1); 
+}
 
 /*SECCION DE PRODUCTOS*/
 
@@ -179,6 +206,8 @@ header .navbar a:hover{
 .novedades .box-container .box .content:hover{
     cursor: pointer;
     transform: scale(1.1);
+    color: #6B5A73;
+
 }
 
 .novedades .box-container .box .img{
@@ -203,7 +232,6 @@ header .navbar a:hover{
     transform: scale(1.05);
     outline: 0.5rem solid #C6B5E9;
 }
-
 
 /*SECCION DE MEDIDAS*/
 
@@ -238,7 +266,7 @@ header .navbar a:hover{
 }
 
 .medidas .box-container .box .img:hover{
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .medidas .box-container .box .content h2{
@@ -250,9 +278,15 @@ header .navbar a:hover{
     text-align: center;
 }
 
-.medidas .box-container .box .content:hover{
+.medidas .box-container .box .content p{
+    padding: 0.5rem;
+    font-size: 1.6rem;
+}
+
+.medidas .box-container .box .content p:hover{
     cursor: pointer;
-    transform: scale(1.1);
+    transform: scale(1.5);
+    color: #6B5A73;
 }
 
 /*SECCION DE SOBRE NOSOTROS*/
@@ -293,11 +327,9 @@ header .navbar a:hover{
     color: #6B5A73;
     border: 0.2rem solid #A7C7E7;
     font-size: 2.2rem;
-    margin-left: 1rem;
     padding: 0.5rem;
     padding-left: 0.9rem;
     padding-right: 0.9rem;
-    cursor: pointer;
 }
 
 .nosotros-info .button:hover {
@@ -409,8 +441,8 @@ footer .btn{
 }
 
 footer .btn:hover{
-    background-color: #F2E6D8;
-    color: #6B5A73;
+    background-color: #C6B5E9;
+    color: #F2E6D8;
     border: .1rem solid #6B5A73;
 }
 

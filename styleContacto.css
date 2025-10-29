@@ -138,8 +138,7 @@ header .navbar a:hover{
 }
 
 .box-container{
-    display: flex;
-    flex-direction: column; 
+    font-size: 1.5rem;
     line-height: 2rem;
     justify-content: center;
     align-items: center;
@@ -147,55 +146,32 @@ header .navbar a:hover{
     margin-bottom: 5rem;
 }
 
-.box-container .box .link,
-.box .acceso-contraseña{
+.whatsapp, .teléfono, .mail {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     align-items: center;
     padding: 2rem;
 }
 
-.box h2{
-    margin-left: 10px; 
-    margin-top: 0;
-    margin-bottom: 10px;
+.titulo-con-icono {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.titulo-con-icono h2{
+    margin-left: 10px; 
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: "Cormorant Garamond";
+    font-size: 25px;
     font-weight: bold;
 }
 
-.box-container .link .mail,
-.box-container .acceso-contraseña .mail,
-.box-container .acceso-contraseña .contra {
-    border: 0.1rem solid #2C2C2C;
-    margin: 0.5rem;
-    padding: 0.2rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-}
-
-.box-container .box .link .btn,
-.box .acceso-contraseña .btn{
-    background-color: #A7C7E7;
-    border: 0.1rem solid #2C2C2C;
-    padding: 0.5rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    margin: 1rem;
-    cursor: pointer;
-}
-
-.box-container .box .link .btn:hover,
-.box .acceso-contraseña .btn:hover{
-    background-color: #C6B5E9;
-    color: #F2E6D8;
-}
-
-.box-container .box .acceso-contraseña a{
-    font-size: 1.5rem;
-    font-weight: bold;
+.icon img{
+    width: 50px;
+    height: 50px;
 }
 
 /*FOOTER*/

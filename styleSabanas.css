@@ -127,6 +127,39 @@ header .navbar a:hover{
     /*background-color: rgba(167, 199, 231, 1);*/
 }
 
+/*SECCION DE ICONO DE WHATSAPP*/
+.whatsapp-flotante {
+    position: fixed; 
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; 
+    
+    /*Para que se vea como un círculo el contenedor*/
+    width: 60px; 
+    height: 60px;
+    padding: 0;
+    
+    border-radius: 50%; /*Para que sea un círculo perfecto*/
+    
+    /*Centra el ícono dentro del botón*/
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    background-color: #F7F7F7;
+}
+
+.whatsapp-bubble {
+    width: 42px; 
+    height: 44px;
+}
+
+.whatsapp-flotante:hover {
+    background-color: #c0a0ff;
+    transform: scale(1.1); 
+}
+
 /*PRODUCTOS*/
 
 .catalogo{
@@ -251,6 +284,7 @@ footer .btn{
 footer .btn:hover{
     background-color: #C6B5E9;
     color: #F2E6D8;
+    border: .1rem solid #6B5A73;
 }
 
 footer .iconos-footer{

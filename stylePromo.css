@@ -94,14 +94,18 @@ header .navbar a:hover{
     color: #F2E6D8;
 }
 
+body{
+    font-size: 1.6rem;
+}
+
 /*HERO DE CATEGORIA*/
 
 .hero-product{
     background: url(images/HeroPromociones.png) no-repeat center center/cover; 
-    height: 600px;
     display: flex;
     align-items: center;
     padding-left: 5%;
+    min-height: 100vh;
 }
 
 .hero-product h1{
@@ -145,60 +149,183 @@ header .navbar a:hover{
     transform: scale(1.1); 
 }
 
-/*PRODUCTOS*/
+/*PROMOCIONES*/
 
-.catalogo{
-    display: block;
+.seccion-principal {
+    padding: 60px 5%;
 }
 
-.catalogo .titulo{
-    font-size: 2rem;
-    font-weight: medium;
-    padding: 1.5rem;
-}
-
-.catalogo .titulo span{
-    font-weight: bold;
-}
-
-.catalogo .box-container{
-    padding: 20px 40px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: center;
-}
-
-.catalogo .box-container .box{
-    padding: 20px;
-    box-sizing: border-box;
-    flex: 1 1 calc(33% - 40px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.catalogo .box-container .box .img img {
-    width: 500px; height: auto;
-    cursor: pointer;
-    border: 1px solid #2C2C2C;
-}
-
-.catalogo .box-container .box .content {
-    width: 500px; height: 80px;
-    font-size: 1.6rem;
+.seccion-principal h2 {
+    color: #6B5A73;
     text-align: center;
-    border-left: 1px solid #2C2C2C;
-    border-right: 1px solid #2C2C2C;
-    border-bottom: 1px solid #2C2C2C;
-    cursor: pointer;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
 }
 
-.catalogo .box-container .box .content .precio{
-    padding-top: 20px;
+#lista-promociones {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#lista-promociones ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    /*Mostrar 3 columnas para las 3 promociones*/
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#lista-promociones li {
+    /*Fondo de los bloques de promoción*/
+    background-color: #c0a0ff;
+    padding: 20px;
+    border-radius: 8px;
     font-weight: bold;
-    color: #6B5A73; 
-    margin-top: 5px;
+    font-size: 1.8rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    outline-style: groove;
+    outline-color: #A7C7E7;
+}
+
+/*CALCULADORA*/
+
+#formulario-productos {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+#formulario-productos h3 {
+    color: #6B5A73;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+#formulario-productos button:hover{
+    transform: scale(1.1);
+}
+
+/*TABLA*/
+.producto-fila { 
+    display: flex; /*Flexbox para alinear horizontalmente*/
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #eee;
+    flex-wrap: wrap; /*Permite que los elementos salten de línea en pantallas pequeñas*/
+}
+
+.producto-fila label {
+    font-weight: 600;
+    flex-shrink: 0; /*Evita que la etiqueta se achique*/
+}
+
+/*SELECTOR Y INPUT*/
+.producto-fila select { 
+    padding: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    flex-grow: 1; /*Permite que ocupe el espacio principal*/
+    min-width: 150px; /*Ancho mínimo para que se vea legible*/
+}
+
+.producto-fila input.input-cantidad {
+    padding: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    width: 70px; /*Ancho fijo y pequeño para la cantidad*/
+    text-align: center;
+    flex-shrink: 0;
+    margin-right: 5px;
+}
+
+.producto-fila:last-of-type {
+    border-bottom: none;
+}
+
+.select-producto option{
+    font-size: 1.5rem;
+}
+
+#formulario-productos button {
+    background-color: #6B5A73;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/*BOTÓN DE ELIMINAR*/
+.btn-eliminar {
+    background-color: #A7C7E7; /* Fondo azul claro, o blanco */
+    color: #6B5A73; /* Púrpura suave para la 'X' */
+    border: 1px solid #6B5A73;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Evita que el botón se encoja al reducir el tamaño de la pantalla */
+    transition: background-color 0.2s;
+}
+
+.btn-eliminar:hover {
+    background-color: #6B5A73;
+    color: white;
+    transform: none;
+}
+
+/*SECCIÓN RESUMEN DE COMPRA*/
+#resultados-calculo {
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 25px;
+    background-color: #C6B5E9; /* Fondo de acento (Lila/Malva) para destacar el total */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    color: #2C2C2C;
+}
+
+#resultados-calculo h3 {
+    border-bottom: 1px solid #6B5A73; /* Separador */
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+#resultados-calculo p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.total-final { 
+    font-size: 1.8rem; 
+    font-weight: bold; 
+    color: #6B5A73; /* Color de acento para el total */
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px solid rgba(107, 90, 115, 0.5);
+}
+
+.total-final span {
+    font-size: 2rem;
 }
 
 /*FOOTER*/

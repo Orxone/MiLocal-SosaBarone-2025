@@ -113,10 +113,10 @@ header .navbar a:hover{
 
 .hero-product{
     background: url(images/HeroSabanas.png) no-repeat center center/cover; 
-    height: 600px;
     display: flex;
     align-items: center;
     padding-left: 5%;
+    min-height: 100vh;
 }
 
 .hero-product h1{

@@ -23,6 +23,7 @@ body{
     min-height: 100vh;
     background-color: #F7F7F7;
 }
+
 header{
     background-color: #F7F7F7;
     position: fixed;
@@ -32,18 +33,23 @@ header{
 }
 
 header .banner{
-    text-align: center;
     background-color: #c0a0ff;
-    color: #2C2C2C;
-    font-size: 1.5rem;
-    font-weight: 550;
-    font-family: "Cormorant Garamond";
+}
+
+header .banner a {
+    display: block; /*Hace que el link ocupe todo el ancho (como un div)*/
     padding: 0.3rem;
+    text-align: center;
+    color: #2C2C2C;
+    font-size: 1.7rem;
+    font-weight: 1000;
+    font-family: "Cormorant Garamond";
+    text-decoration: none;
 }
 
 header .banner:hover{
     background-color: #A7C7E7;
-    cursor: pointer;
+    color: #F2E6D8;
 }
 
 header .header-up{
@@ -109,6 +115,16 @@ header .navbar a:hover{
     color: #F2E6D8;
 }
 
+/*MENÚ HAMBURGUESA*/
+
+#burger-btn {
+    font-size: 3rem;
+    color: #6B5A73;
+    cursor: pointer;
+    display: none;
+    margin-left: 1.5rem;
+}
+
 /*HERO DE CATEGORIA*/
 
 .hero-product{
@@ -159,7 +175,6 @@ header .navbar a:hover{
     background-color: #c0a0ff;
     transform: scale(1.1); 
 }
-
 
 /*PRODUCTOS*/
 
@@ -295,17 +310,21 @@ footer .iconos-footer{
 footer .logoyredes{
     display: flex;
     flex-direction: column;
-    align-items: left;
-    padding-top: 1.5rem;
+    align-items: center;
+    padding-top: 1rem;
     padding-left: 3rem;
 }
 
 footer .iconos-footer .logoyredes .redes{
-    padding-left: 6rem;
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem; 
+    margin-bottom: 1rem;
 }
 
 footer .iconos-footer .logoyredes .redes img{
-    height: 20px; width: 20px;
+    height: 20px; 
+    width: 20px;
 }
 
 footer .iconos-footer .logoyredes .redes img:hover{
@@ -372,6 +391,59 @@ footer .copyright{
         height: 2rem; width: auto;
     }
 
+    
+    /*PARA QUE SE AJUSTE Y SE PONGAN LOS BOTONES EN LOS EXTREMOS*/
+    header .header-up {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        grid-template-columns: none; 
+    }
+
+    header .header-up form button{
+        height: 2rem; 
+        width: auto;
+    }
+
+    #burger-btn {
+        display: block; /*Muestra el menú hamburguesa*/
+    }
+    
+    /*PARA QUE SE ACOMODEN LOS ICONOS EN EL CENTRO*/
+    header .header-up .icons {
+        display: flex;
+        align-items: center;
+    }
+
+    header .navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #F7F7F7;
+        border-top: 1px solid #ccc;
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    }
+
+    /*SE CONVIERTEN LOS BOTONES DE LAS PESTAÑAS EN COLUMNAS*/
+    header .navbar ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header .navbar a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 0.5rem 0;
+        border: none;
+    }
+
+    header .navbar.active {
+        display: flex; /*Abre el menú cuando se hace click*/
+    }
+
     section{
         padding: 1rem;
     }
@@ -389,6 +461,16 @@ footer .copyright{
     
     header{
         padding: 1rem;
+    }
+
+    header .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    header .navbar a {
+        margin-left: 0;
     }
 
     .hero-product .content{

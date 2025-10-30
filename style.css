@@ -15,6 +15,12 @@ html{
     overflow-x: hidden;
 }
 
+img{
+    max-width: 100%;
+    height: auto;
+    display: block; /*Para eliminar espacios extra*/
+}
+
 section{
     padding: 1rem;
 }
@@ -32,19 +38,25 @@ header{
     box-shadow: 0.5rem 0.2rem rgba(0, 0, 0, .1);
 }
 
+/*BANNER DE PROMOCIÓN*/
+
 header .banner{
-    text-align: center;
     background-color: #c0a0ff;
-    color: #2C2C2C;
-    font-size: 1.5rem;
-    font-weight: 550;
-    font-family: "Cormorant Garamond";
+}
+
+header .banner a {
+    display: block; /*Hace que el link ocupe todo el ancho (como un div)*/
     padding: 0.3rem;
+    text-align: center;
+    color: #2C2C2C;
+    font-size: 1.7rem;
+    font-weight: 1000;
+    font-family: "Cormorant Garamond";
+    text-decoration: none;
 }
 
 header .banner:hover{
     background-color: #A7C7E7;
-    cursor: pointer;
     color: #F2E6D8;
 }
 
@@ -63,6 +75,8 @@ header .header-up img{
     height: 35px; width: 35px;
 }
 
+/*BOTON DE CUENTA*/
+
 header .header-up .icons{
     margin-left: auto;
 }
@@ -75,16 +89,7 @@ header .header-up .icons a:hover, .icons a:active{
     border-bottom: 0.5rem solid #C6B5E9;
 }
 
-header .header-up input{
-    border-top: .1rem solid #2C2C2C;
-    border-bottom: .1rem solid #2C2C2C;
-    border-left: .1rem solid #2C2C2C;
-    background-color: #F7F7F7;
-    font-family: inherit;
-    width: 25rem; 
-    height: 2rem;
-    font-size: 15px;
-}
+/*BOTONES DE NAVEGACIÓN*/
 
 header .navbar ul{
     list-style: none;
@@ -110,6 +115,18 @@ header .navbar a:hover{
     border: solid #6B5A73 0.2rem;
     color: #F2E6D8;
 }
+
+/*MENÚ HAMBURGUESA*/
+
+#burger-btn {
+    font-size: 3rem;
+    color: #6B5A73;
+    cursor: pointer;
+    display: none;
+    margin-left: 1.5rem;
+}
+
+/*CONTENIDO DE LA PÁGINA*/
 
 .home{
     background-color: #F7F7F7;
@@ -143,7 +160,7 @@ header .navbar a:hover{
     right: 20px;
     z-index: 1000; 
     
-    /*Para que se vea como un círculo el contenedor*/
+    /*Para que se vea como un círculo*/
     width: 60px; 
     height: 60px;
     padding: 0;
@@ -224,7 +241,11 @@ header .navbar a:hover{
 }
 
 .promos .promo img{
-    width: 1000px; height: 450px;
+    width: 1000px;
+    max-width: 100%; /*Para evitar que se haga más ancha que el contenedor*/
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .promos .promo img:hover{
@@ -299,6 +320,7 @@ header .navbar a:hover{
 .nosotros-info .imagen {
     float: left; 
     margin-right: 40px;
+    margin-left: 20px;
     width: 50%;
     max-width: 700px;
 }
@@ -320,6 +342,7 @@ header .navbar a:hover{
 .nosotros-info p {
     font-size: 2rem;
     line-height: 1.8;
+    margin-right: 0.5rem;
     margin-bottom: 15px;
 }
 
@@ -380,7 +403,6 @@ footer{
 footer .menu-footer{
     display: grid;
     grid-template-columns: repeat(3, 1fr) 50rem;
-    /*gap: 3rem;*/
     padding: 3rem;
     justify-items: center;
     font-size: 1.5rem;
@@ -449,17 +471,21 @@ footer .iconos-footer{
 footer .logoyredes{
     display: flex;
     flex-direction: column;
-    align-items: left;
-    padding-top: 1.5rem;
+    align-items: center;
+    padding-top: 1rem;
     padding-left: 3rem;
 }
 
 footer .iconos-footer .logoyredes .redes{
-    padding-left: 6rem;
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem; 
+    margin-bottom: 1rem;
 }
 
 footer .iconos-footer .logoyredes .redes img{
-    height: 20px; width: 20px;
+    height: 20px; 
+    width: 20px;
 }
 
 footer .iconos-footer .logoyredes .redes img:hover{
@@ -502,8 +528,56 @@ footer .copyright{
         padding: 1rem 2%;
     }
 
+    /*PARA QUE SE AJUSTE Y SE PONGAN LOS BOTONES EN LOS EXTREMOS*/
+    header .header-up {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        grid-template-columns: none; 
+    }
+
     header .header-up form button{
-        height: 2rem; width: auto;
+        height: 2rem; 
+        width: auto;
+    }
+
+    #burger-btn {
+        display: block; /*Muestra el menú hamburguesa*/
+    }
+    
+    /*PARA QUE SE ACOMODEN LOS ICONOS EN EL CENTRO*/
+    header .header-up .icons {
+        display: flex;
+        align-items: center;
+    }
+
+    header .navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #F7F7F7;
+        border-top: 1px solid #ccc;
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    }
+
+    /*SE CONVIERTEN LOS BOTONES DE LAS PESTAÑAS EN COLUMNAS*/
+    header .navbar ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header .navbar a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 0.5rem 0;
+        border: none;
+    }
+
+    header .navbar.active {
+        display: flex; /*Abre el menú cuando se hace click*/
     }
 
     section{
@@ -525,6 +599,16 @@ footer .copyright{
         padding: 1rem;
     }
 
+    header .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    header .navbar a {
+        margin-left: 0;
+    }
+
     .home{
         min-height: 90vh;
     }
@@ -542,6 +626,28 @@ footer .copyright{
 
     .home .content span{
         padding: 0.5rem 0;
+    }
+
+    .nosotros-info {
+        padding: 1.5rem;
+    }
+
+    .nosotros-info .imagen {
+        float: none;
+        width: 100%;
+        max-width: 100%; 
+        margin-right: 0; 
+        margin-left: 0;
+        margin-bottom: 2rem;
+    }
+
+    .nosotros-info h1 {
+        font-size: 3.5rem;
+    }
+
+    .nosotros-info p {
+        font-size: 1.6rem;
+        line-height: 1.6;
     }
 }
 
@@ -569,6 +675,24 @@ footer .copyright{
     .home .content span{
         padding: 0.5rem 0;
         font-size: 22px;
+    }
+
+    /*PARA QUE SE VEA BIEN LA SECCIÓN DE BANCOS*/
+
+    .bancos .box-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .bancos .box-container .box {
+        width: 80%;
+        max-width: 300px;
+        flex: none;
+    }
+
+    .bancos h1 {
+        font-size: 2.5rem;
     }
 
     footer .menu-footer{

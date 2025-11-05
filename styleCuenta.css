@@ -17,6 +17,9 @@ html{
 
 body{
     background-color: #F7F7F7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /*asegura que ocupe al menos toda la pantalla*/
 }
 
 header{
@@ -153,65 +156,170 @@ header .navbar a:hover{
     transform: scale(1.1); 
 }
 
-.box-container{
+.container{
+    padding-top: 10rem;
     display: flex;
-    flex-direction: column; 
-    line-height: 2rem;
+    flex-grow: 1;
     justify-content: center;
     align-items: center;
-    margin-top: 14rem;
-    margin-bottom: 5rem;
 }
 
-.box-container .box .link,
-.box .acceso-contraseña{
+.container .logreg-box{
+    width: 400px;
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    position: relative;
+    height: 400px;
+}
+
+.logreg-box .form-box{ /*Contenido de la parte de ingresar y registrarse*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-}
-
-.box h2{
-    margin-left: 10px; 
-    margin-top: 0;
-    margin-bottom: 10px;
-    display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-.box-container .link .mail,
-.box-container .acceso-contraseña .mail,
-.box-container .acceso-contraseña .contra {
-    border: 0.1rem solid #2C2C2C;
-    margin: 0.5rem;
-    padding: 0.2rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-}
-
-.box-container .box .link .btn,
-.box .acceso-contraseña .btn{
-    background-color: #A7C7E7;
-    border: 0.1rem solid #2C2C2C;
-    padding: 0.5rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    margin: 1rem;
-    cursor: pointer;
-}
-
-.box-container .box .link .btn:hover,
-.box .acceso-contraseña .btn:hover{
+    padding: 3rem;
     background-color: #C6B5E9;
-    color: #F2E6D8;
+    transition: opacity 0.4s ease, z-index 0.4s ease;
 }
 
-.box-container .box .acceso-contraseña a{
-    font-size: 1.5rem;
-    font-weight: bold;
+/*Javascript*/
+/*El formulario de registro es invisible*/
+.logreg-box .form-box.register { 
+    opacity: 0;
+    pointer-events: none; /*No se puede interactuar*/
+    z-index: 1; /*Abajo*/
+}
+
+/*El formulario de login es visible*/
+.logreg-box .form-box.login {
+    opacity: 1;
+    pointer-events: auto; /*Se puede interactuar*/
+    z-index: 2; /*Arriba*/
+}
+
+
+/*TRANSICIÓN DE REGISTRARSE*/
+
+/*Cuando la caja tiene la clase 'active', el login desaparece*/
+.logreg-box.active .form-box.login {
+    opacity: 0;
+    pointer-events: none; /*Inactivo*/
+    z-index: 1; /*Abajo*/
+}
+
+/*Cuando la caja tiene la clase 'active', el registro aparece*/
+.logreg-box.active .form-box.register {
+    opacity: 1;
+    pointer-events: auto; /*Activo*/
+    z-index: 2; /*Arriba*/
+}
+
+/**/
+
+.form-box h2{ /*Título*/
+    font-size: 32px;
+    text-align: center;
+}
+
+.form-box .input-box{ /*Contenedores de opciones*/
+    width: 300px;
+    height: 50px;
+    border-bottom: 2px solid white; /*La linea blanca debajo de las opciones*/
+    margin: 30px 0;
+}
+
+.input-box input{ /*Zona para escribir y texto dentro*/
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #2C2C2C;
+    font-weight: 500;
+    z-index: 5; 
+    position: relative;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s ease; /*Transcision smooth entre titulo y barra para escribir*/
+}
+
+.input-box input:focus~label, 
+.input-box input:valid~label{ /*Para que deje espacio para escribir debajo del título de la opción*/
+    top: -5px;
+}
+
+.form-box .remember-forgot{
+    font-size: 15px;
+    font-weight: 500;
+    margin: -15px 0 15px; /*Para que se acerce más a la linea blanca*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input{
+    accent-color: #2C2C2C;
+    margin-right: 3px;
+}
+
+.remember-forgot a{ /*Contraseña olvidada*/
+    color: #2C2C2C;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover{ /*Contraseña olvidada*/
+    text-decoration: underline;
+}
+
+.btn-cuenta{ /*Botón de Ingresar*/
+    width: 100%;
+    height: 35px;
+    background-color: #2C2C2C;
+    color: white;
+    border: 0.1rem solid grey;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.btn-cuenta:hover{
+    background-color: #A7C7E7;
+    border: 0.2rem solid #6B5A73;
+
+}
+
+.form-box .login-register{
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.login-register p a{ /*Registrarse*/
+    color: #2C2C2C;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-register p a:hover{ /*Cuando pasa el cursor por encima de Registrarse*/
+    text-decoration: underline;
 }
 
 /*FOOTER*/

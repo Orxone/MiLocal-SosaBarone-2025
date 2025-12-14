@@ -1,0 +1,164 @@
+/*HERO DE CATEGORIA*/
+
+.hero-product{
+    background: url(images/HeroAcolchados.png) no-repeat center center/cover; 
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    min-height: 100vh;
+}
+
+.hero-product h1{
+    font-size: 10rem;
+    font-family: "Cormorant Garamond";
+    color: #2C2C2C;
+    padding: 10px 20px;
+}
+
+/*PRODUCTOS*/
+
+.catalogo{
+    display: block;
+}
+
+.catalogo .titulo{
+    font-size: 2rem;
+    font-weight: medium;
+    padding: 1.5rem;
+}
+
+.catalogo .titulo span{
+    font-weight: bold;
+}
+
+.catalogo .box-container{
+    padding: 20px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.catalogo .box-container .box{
+    padding: 20px;
+    box-sizing: border-box;
+    flex: 1 1 calc(33% - 40px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.catalogo .box-container .box .img img {
+    width: 500px; height: auto;
+    cursor: pointer;
+    border: 1px solid #2C2C2C;
+}
+
+.catalogo .box-container .box .content {
+    width: 500px; height: 80px;
+    font-size: 1.6rem;
+    text-align: center;
+    border-left: 1px solid #2C2C2C;
+    border-right: 1px solid #2C2C2C;
+    border-bottom: 1px solid #2C2C2C;
+    cursor: pointer;
+}
+
+.catalogo .box-container .box .content .precio{
+    padding-top: 20px;
+    font-weight: bold;
+    color: #6B5A73; 
+    margin-top: 5px;
+}
+
+
+/*MEDIA QUERY*/
+
+@media (max-width:1300px) {
+    html{
+        font-size: 60%;
+    }
+
+    .hero-product{
+        background-position: auto;
+    }
+
+    .catalogo .box-container .box .img img{
+        width: 300px; height: auto;
+        cursor: pointer;
+        border: 1px solid #2C2C2C;
+    }
+
+    .catalogo .box-container .box .content{
+        width: 300px; height: 80px;
+    }
+
+}
+
+@media (max-width:991px) {
+    html{
+        font-size: 55%;
+    }
+    
+    section{
+        padding: 1rem;
+    }
+
+    .home{
+        background-position: auto;
+    }
+
+}
+
+@media (max-width:768px) {
+    
+    .hero-product .content{
+        padding: 1.5rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    .hero-product .content img{
+        width: auto;
+    }
+
+    .hero-product .content h1{
+        padding: 0.5rem 0;
+    }
+
+    .catalogo .box-container .box .img img{
+        width: 300px; height: auto;
+        cursor: pointer;
+        border: 1px solid #2C2C2C;
+    }
+
+    .catalogo .box-container .box .content{
+        width: 300px; height: 80px;
+    }
+}
+
+@media (max-width: 680px) and (min-width: 451px) {
+
+    .hero-product .content{
+        padding: 1rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .hero-product .content h1{
+        padding: 0.5rem 0;
+    }
+
+}
+
+@media (max-width:450px) and (min-width: 250px){
+
+    .hero-product .content{
+        padding: 1rem;
+    }
+
+    .hero-product .content h1{
+        padding: 0.5rem 0;
+        font-size: 50px;
+    }
+}

@@ -30,13 +30,12 @@
 .novedades .box-container{
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 100px;
     justify-content: center;
     padding-bottom: 3rem;
 }
 
 .novedades .box-container .box{
-    /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0);*/
     padding: 20px;
     box-sizing: border-box;
     flex: 1 1 calc(33% - 40px);
@@ -45,11 +44,13 @@
     gap: 15px;
     align-items: center;
     border: 2px solid #C6B5E9;
+    transition: .4s; /*Movimiento smooth para cuando se sale el cursor de encima*/
 }
 
 .novedades .box-container .box:hover{
     cursor: pointer;
     transform: scale(1.05);
+    transition: .4s; /*Hace que el movimiento sea más smooth*/
     background-color:rgba(240, 240, 240, 0.7);  
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
@@ -78,13 +79,15 @@
     display: block;
     margin: 0 auto;
     cursor: pointer;
+    transition: .4s; /*Movimiento smooth para cuando se sale el cursor de encima*/
 }
 
 .promos .promo img:hover{
     cursor: pointer;
     border: 3px solid #C6B5E9;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    transform: translateY(-5px);   
+    transform: translateY(-5px);  
+    transition: .4s; /*Hace que el movimiento sea más smooth*/ 
 }
 
 /*SECCION DE MEDIDAS*/
@@ -119,11 +122,13 @@
     cursor: pointer;
     border: 2px solid #C6B5E9;
     border-radius: 5%;
+    transition: .4s; /*Movimiento smooth para cuando se sale el cursor de encima*/
 }
 
 .medidas .box-container .box:hover{
     cursor: pointer;
     transform: scale(1.05);
+    transition: .4s; /*Hace que el movimiento sea más smooth*/
     background-color:rgba(240, 240, 240, 0.7);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
@@ -153,12 +158,13 @@
     max-width: 1200px;
     position: relative;
     cursor: pointer;
-
+    transition: .4s; /*Movimiento smooth para cuando se sale el cursor de encima*/
 }
 
 .nosotros-info .box-container-link:hover{
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     transform: translateY(-5px);
+    transition: .4s; /*Hace que el movimiento sea más smooth*/
     border: 3px solid #A7C7E7;
 }
 
@@ -206,19 +212,15 @@
 .bancos .box-container{
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
     justify-content: center;
     padding-bottom: 8rem;
+    gap: 100px;
 }
 
 .bancos .box-container .box{
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
-    padding: 20px;
-    box-sizing: border-box;
-    flex: 1 1 calc(33% - 40px);
     display: flex;
     flex-direction: column;
-    gap: 15px;
     align-items: center;
 }
 
@@ -233,10 +235,12 @@
     cursor: pointer;
     border-radius: 5%;
     border: 2px solid #C6B5E9;
+    transition: .4s; /*Movimiento smooth para cuando se sale el cursor de encima*/
 }
 
 .bancos .box-container .box .img:hover{
     transform: scale(1.05);
+    transition: .4s; /*Hace que el movimiento sea más smooth*/
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -251,6 +255,10 @@
     
     .nosotros-info .descripcion-breve{
         bottom: 70px;
+    }
+
+    .bancos .box-container{
+        gap: 20px;
     }
 }
 
@@ -330,13 +338,12 @@
     .bancos .box-container {
         flex-direction: column;
         align-items: center;
-        gap: 20px;
+        /*gap: none;*/
     }
 
     .bancos .box-container .box {
         width: 80%;
         max-width: 300px;
-        flex: none;
     }
 
     .bancos h1 {
@@ -376,5 +383,21 @@
     .home .content span{
         padding: 0.5rem 0;
         font-size: 18px;
+    }
+
+    .novedades .box-container{
+        width: 70%;
+        margin-left: 50px; /*Para que se alineen todas en el centro*/
+    }
+
+    .bancos .box-container {
+        flex-direction: column;
+        align-items: center;
+        /*gap: none;*/
+    }
+
+    .bancos .box-container .box {
+        width: 70%;
+        max-width: 300px;
     }
 }

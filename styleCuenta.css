@@ -1,77 +1,79 @@
+body{
+    min-height: 110vh;
+}
 .container{
-    padding-top: 10rem;
-    display: flex;
-    flex-grow: 1;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*Para que este en el medio*/
+    width: 100%; /*Que ocupe el máximo ancho*/
+    height: 100%;
+}
+
+/*VIDEO DE PRESENTACIÓN*/
+
+.video-tienda .side-video{ 
+    position: relative;
+    left: 0;
+    top: 0; /*Para que no lo pise la barra de navegación*/
+    width: 65%;
+    height: 995px;
 }
 
 .container .logreg-box{
-    width: 400px;
-    max-width: 90%;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    position: relative;
-    height: 400px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .logreg-box .form-box{ /*Contenido de la parte de ingresar y registrarse*/
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 1;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3rem;
+    width: 100%;
+    height: 100%;
     background-color: #C6B5E9;
-    transition: opacity 0.4s ease, z-index 0.4s ease;
+    border-top-right-radius: 10px; 
+    border-bottom-right-radius: 10px;
 }
 
 /*Javascript*/
-/*El formulario de registro es invisible*/
-.logreg-box .form-box.register { 
-    opacity: 0;
-    pointer-events: none; /*No se puede interactuar*/
-    z-index: 1; /*Abajo*/
+.logreg-box .form-box.login{
+    transform: translateX(0);
+    transition: transform .6s ease;
+    transition-delay: .5s;
 }
 
-/*El formulario de login es visible*/
-.logreg-box .form-box.login {
-    opacity: 1;
-    pointer-events: auto; /*Se puede interactuar*/
-    z-index: 2; /*Arriba*/
+.logreg-box.active .form-box.login{
+    transform: translateX(100%);
+    transition-delay: 0s;
 }
 
-
-/*TRANSICIÓN DE REGISTRARSE*/
-
-/*Cuando la caja tiene la clase 'active', el login desaparece*/
-.logreg-box.active .form-box.login {
-    opacity: 0;
-    pointer-events: none; /*Inactivo*/
-    z-index: 1; /*Abajo*/
+.logreg-box .form-box.register{ /*Poner la sección de registrarse al lado de la de ingreso*/
+    transform: translateX(100%);
+    transition: transform .6s ease;
+    transition-delay: 0s;
 }
 
-/*Cuando la caja tiene la clase 'active', el registro aparece*/
-.logreg-box.active .form-box.register {
-    opacity: 1;
-    pointer-events: auto; /*Activo*/
-    z-index: 2; /*Arriba*/
+.logreg-box.active .form-box.register{
+    transform: translateX(0);
+    transition-delay: .5s;
 }
 
 /**/
 
 .form-box h2{ /*Título*/
-    font-size: 32px;
+    font-size: 40px;
     text-align: center;
 }
 
 .form-box .input-box{ /*Contenedores de opciones*/
-    width: 300px;
+    position: relative;
+    width: 340px;
     height: 50px;
     border-bottom: 2px solid white; /*La linea blanca debajo de las opciones*/
     margin: 30px 0;
@@ -80,14 +82,12 @@
 .input-box input{ /*Zona para escribir y texto dentro*/
     width: 100%;
     height: 100%;
-    background-color: transparent;
+    background: transparent;
     border: none;
     outline: none;
-    font-size: 16px;
+    font-size: 20px;
     color: #2C2C2C;
     font-weight: 500;
-    z-index: 5; 
-    position: relative;
 }
 
 .input-box label{
@@ -95,10 +95,10 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
     pointer-events: none;
-    transition: .5s ease; /*Transcision smooth entre titulo y barra para escribir*/
+    transition: .5s ease; /*Transición smooth entre título y barra para escribir*/
 }
 
 .input-box input:focus~label, 
@@ -107,7 +107,7 @@
 }
 
 .form-box .remember-forgot{
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 500;
     margin: -15px 0 15px; /*Para que se acerce más a la linea blanca*/
     display: flex;
@@ -115,40 +115,41 @@
 }
 
 .remember-forgot label input{
-    accent-color: #2C2C2C;
+    accent-color: #F7F7F7;
     margin-right: 3px;
 }
 
 .remember-forgot a{ /*Contraseña olvidada*/
-    color: #2C2C2C;
-    font-weight: 600;
-    text-decoration: none;
+    color: #2c2c2c;
 }
 
 .remember-forgot a:hover{ /*Contraseña olvidada*/
     text-decoration: underline;
+    color: #F7F7F7;
 }
 
 .btn-cuenta{ /*Botón de Ingresar*/
     width: 100%;
     height: 35px;
-    background-color: #2C2C2C;
-    color: white;
+    background-color: black;
+    color: #F7F7F7;
     border: 0.1rem solid grey;
     outline: none;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
+    margin-top: 10px; /*Separación entre botón y texto de recordar y olvide*/
 }
 
-.btn-cuenta:hover{
+.btn-cuenta:hover{ /*Botón de Ingresar*/
     background-color: #A7C7E7;
-    border: 0.2rem solid #6B5A73;
-
+    border: solid #6B5A73 0.2rem;
+    color: #2C2C2C;
 }
+
 
 .form-box .login-register{
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 500;
     text-align: center;
     margin-top: 25px;
@@ -162,86 +163,34 @@
 
 .login-register p a:hover{ /*Cuando pasa el cursor por encima de Registrarse*/
     text-decoration: underline;
+    color: #F7F7F7;
 }
 
 /*MEDIA QUERY*/
 
-@media (max-width:991px) {
-
-        section{
-        padding: 1rem;
-    }
-
-    .home{
-        background-position: auto;
-    }
-
-}
-
-@media (max-width:768px) {
+@media (max-width:1300px) {
     
-    .home{
-        min-height: 90vh;
+    .html{
+        font-size: 90%;    
     }
 
-    .home .content{
-        padding: 1.5rem;
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
-        margin: 0.5 auto;
-    }
-
-    .home .content img{
-        height: auto; width: auto;
-    }
-
-    .home .content span{
-        padding: 0.5rem 0;
+    .container .content{
+        padding-left: 80px;
     }
 }
 
-@media (max-width: 680px) and (min-width: 451px) {
+@media (max-width:1000px){
     
-    .home{
-        min-height: 85vh;
+    .container .content{
+        padding-left: 60px;
     }
-
-    .home .content{
-        padding: 1rem;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-        margin: 0 auto;
-    }
-
-    .home .content img{
-        height: auto; width: 400px;
-    }
-
-    .home .content span{
-        padding: 0.5rem 0;
-        font-size: 22px;
-    }
-
 }
 
-@media (max-width:450px) and (min-width: 250px){
 
-    .home{
-        min-height: 80vh;
+@media (max-width:450px) and (min-width: 250px){ 
+    
+    .html{
+        font-size: 50%;    
     }
 
-    .home .content{
-        padding: 1rem;
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    .home .content img{
-        height: auto; width: 250px;
-    }
-
-    .home .content span{
-        padding: 0.5rem 0;
-        font-size: 18px;
-    }
 }

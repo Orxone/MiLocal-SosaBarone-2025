@@ -184,6 +184,10 @@
         font-size: 55%;
     }
 
+    .fechas .box-container{
+        gap: 30px;
+        padding: 0;
+    }
 }
 
 

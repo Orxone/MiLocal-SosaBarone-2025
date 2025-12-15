@@ -19,52 +19,55 @@
 
 .catalogo{
     display: block;
+    margin-top: 20px;
 }
 
-.catalogo .titulo{
-    font-size: 2rem;
-    font-weight: medium;
-    padding: 1.5rem;
-}
 
-.catalogo .titulo span{
-    font-weight: bold;
-}
+/*SECCION DE PRODUCTOS*/
 
 .catalogo .box-container{
-    padding: 20px 40px;
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 100px;
     justify-content: center;
+    padding-bottom: 3rem;
 }
 
 .catalogo .box-container .box{
+    cursor: pointer;
     padding: 20px;
     box-sizing: border-box;
     flex: 1 1 calc(33% - 40px);
     display: flex;
     flex-direction: column;
+    gap: 15px;
     align-items: center;
+    border: 2px solid #C6B5E9;
+    transition: .4s; /*Movimiento smooth para cuando se sale el cursor de encima*/
 }
 
 .catalogo .box-container .box .img img {
     width: 500px; height: auto;
-    cursor: pointer;
-    border: 1px solid #2C2C2C;
 }
 
 .catalogo .box-container .box .content {
     width: 500px; height: 80px;
-    font-size: 1.6rem;
     text-align: center;
-    border-left: 1px solid #2C2C2C;
-    border-right: 1px solid #2C2C2C;
-    border-bottom: 1px solid #2C2C2C;
     cursor: pointer;
 }
 
+.catalogo .box-container .box .content .titulo{
+    font-size: 2rem;
+    font-weight: medium;
+    padding: 1.5rem;
+}
+
+.catalogo .box-container .box .content .titulo span{
+    font-weight: bold;
+}
+
 .catalogo .box-container .box .content .precio{
+    font-size: 2rem;
     padding-top: 20px;
     font-weight: bold;
     color: #6B5A73; 

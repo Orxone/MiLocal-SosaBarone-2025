@@ -8,6 +8,42 @@
     color: #2C2C2C;
 }
 
+:root{
+    --body: #F7F7F7;
+    --banner: #c0a0ff;
+    --texto-principal: #2C2C2C;
+    --texto-hover: #F2E6D8;
+    --texto-btn: #2C2C2C;
+    --nav-footer: #A7C7E7;
+    --lila: #C6B5E9;
+    --bg-card: transparent;
+    --borde-card: #C6B5E9;
+    --borde-btn: #685A73;
+}
+
+/*COLORES DEL MODO OSCURO*/
+
+.dark-mode {
+    --body: #1F1B24;
+    --banner: #5E5078;
+    --texto-principal: #E6E1F0;
+    --texto-hover: #C6B5E9;
+    --texto-btn: #E6E1F0;
+    --nav-footer: #38618a;
+    --lila: #C6B5E9;
+    --bg-card: #C6B5E9;
+    --borde-card: #4A435C;
+    --borde-btn: #4A435C;
+}
+
+/*TECLADO*/
+:focus-visible {
+    outline: 3px solid var(--borde-btn);
+    outline-offset: 3px;
+}
+
+/*CONTENIDO*/
+
 html{
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -75,7 +111,7 @@ header .header-up img{
     height: 35px; width: 35px;
 }
 
-/*BOTON DE CUENTA*/
+/*BOTON DE CUENTA y MODO OSCURO*/
 
 header .header-up .icons{
     margin-left: auto;
@@ -188,6 +224,10 @@ footer .newsletter,
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+
+footer .contacto-info{
+    line-height: 3rem;
 }
 
 footer .info ul li, 

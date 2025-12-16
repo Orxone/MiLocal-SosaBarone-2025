@@ -13,7 +13,6 @@
     font-family: "Cormorant Garamond";
     color: #2C2C2C;
     padding: 10px 20px;
-    /*background-color: rgba(167, 199, 231, 1);*/
 }
 
 /*PROMOCIONES*/
@@ -38,7 +37,6 @@
     list-style: none;
     padding: 0;
     display: grid;
-    /*Mostrar 3 columnas para las 3 promociones*/
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     max-width: 1200px;
@@ -46,15 +44,13 @@
 }
 
 #lista-promociones li {
-    /*Fondo de los bloques de promoción*/
     background-color: #c0a0ff;
     padding: 20px;
     border-radius: 8px;
     font-weight: bold;
     font-size: 1.8rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    outline-style: groove;
-    outline-color: #A7C7E7;
+    border: 2px solid #6B5A73;
 }
 
 /*CALCULADORA*/
@@ -82,34 +78,31 @@
 
 /*TABLA*/
 .producto-fila { 
-    display: flex; /*Flexbox para alinear horizontalmente*/
+    display: flex;
     align-items: center;
     gap: 15px;
     margin-bottom: 20px;
     padding-bottom: 15px;
-    border-bottom: 1px dashed #eee;
-    flex-wrap: wrap; /*Permite que los elementos salten de línea en pantallas pequeñas*/
+    flex-wrap: wrap
 }
 
 .producto-fila label {
     font-weight: 600;
-    flex-shrink: 0; /*Evita que la etiqueta se achique*/
+    flex-shrink: 0;
 }
 
 /*SELECTOR Y INPUT*/
 .producto-fila select { 
     padding: 10px; 
-    border: 1px solid #ccc;
     border-radius: 4px; 
-    flex-grow: 1; /*Permite que ocupe el espacio principal*/
-    min-width: 150px; /*Ancho mínimo para que se vea legible*/
+    flex-grow: 1;
+    min-width: 150px;
 }
 
 .producto-fila input.input-cantidad {
     padding: 10px; 
-    border: 1px solid #ccc;
     border-radius: 4px; 
-    width: 70px; /*Ancho fijo y pequeño para la cantidad*/
+    width: 70px;
     text-align: center;
     flex-shrink: 0;
     margin-right: 5px;
@@ -124,8 +117,7 @@
 }
 
 #formulario-productos button {
-    background-color: #6B5A73;
-    color: white;
+    background-color: #C6B5E9;
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
@@ -135,8 +127,7 @@
 
 /*BOTÓN DE ELIMINAR*/
 .btn-eliminar {
-    background-color: #A7C7E7; /* Fondo azul claro, o blanco */
-    color: #6B5A73; /* Púrpura suave para la 'X' */
+    background-color: #A7C7E7;
     border: 1px solid #6B5A73;
     padding: 0;
     width: 30px;
@@ -148,13 +139,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0; /* Evita que el botón se encoja al reducir el tamaño de la pantalla */
-    transition: background-color 0.2s;
+    flex-shrink: 0;
 }
 
 .btn-eliminar:hover {
     background-color: #6B5A73;
-    color: white;
+    color: #F7F7F7;
     transform: none;
 }
 
@@ -163,14 +153,14 @@
     max-width: 600px;
     margin: 10px auto;
     padding: 25px;
-    background-color: #C6B5E9; /* Fondo de acento (Lila/Malva) para destacar el total */
+    background-color: #F0E2F7;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     color: #2C2C2C;
 }
 
 #resultados-calculo h3 {
-    border-bottom: 1px solid #6B5A73; /* Separador */
+    border-bottom: 1px solid #6B5A73;
     padding-bottom: 10px;
     margin-bottom: 15px;
 }
@@ -185,7 +175,7 @@
 .total-final { 
     font-size: 1.8rem; 
     font-weight: bold; 
-    color: #6B5A73; /* Color de acento para el total */
+    color: #6B5A73;
     padding-top: 10px;
     margin-top: 10px;
     border-top: 1px solid rgba(107, 90, 115, 0.5);

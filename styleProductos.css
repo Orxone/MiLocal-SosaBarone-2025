@@ -42,16 +42,20 @@
     flex-direction: column;
     gap: 15px;
     align-items: center;
+    background-color: #F0E2F7;
     border: 2px solid #C6B5E9;
     transition: .4s; /*Movimiento smooth para cuando se sale el cursor de encima*/
 }
 
 .catalogo .box-container .box .img img {
-    width: 500px; height: auto;
+    width: 500px; 
+    height: auto;
+    border: 1px solid #6B5A73;
 }
 
 .catalogo .box-container .box .content {
-    width: 500px; height: 80px;
+    width: 500px; 
+    height: 80px;
     text-align: center;
     cursor: pointer;
 }

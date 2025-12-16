@@ -1,122 +1,59 @@
-.box-container{
-    font-size: 1.8rem;
-    line-height: 2.8rem;
-    justify-content: center;
-    align-items: center;
-    margin-top: 14rem;
+.medios-contacto{
+    margin-top: 10rem;
     margin-bottom: 5rem;
 }
 
-.whatsapp, .teléfono, .mail {
+.medios-contacto .box-container {
     display: flex;
-    flex-direction: column; 
-    align-items: center;
-    padding: 2rem;
-}
-
-.titulo-con-icono {
-    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
     justify-content: center;
+    padding-bottom: 3rem;
+    align-items: stretch; /*Obliga a que todas las filas tengan la misma altura */
+}
+
+.medios-contacto .box-container .box{
+    flex: 1 1 200px; 
+    max-width: 300px; 
+    height: 100%; /*Para que todos tengan la misma altura*/
+    transition: .4s;
+    background-color: #F0E2F7; 
+    border: 2px solid #C6B5E9;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     align-items: center;
-    margin-bottom: 15px;
+    justify-content: flex-start;
 }
 
-.titulo-con-icono h2{
-    margin-left: 10px; 
-    margin-top: 0;
-    margin-bottom: 0;
+.medios-contacto .box-container .box img{
+    width: 5rem;
+    height: 5rem;
+}
+
+.medios-contacto .box-container .box:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: .4s; /*Hace que el movimiento sea más smooth*/
+    background-color: #C6B5E9; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.medios-contacto h1{
     font-family: "Cormorant Garamond";
-    font-size: 3.2rem;
-    font-weight: bold;
+    padding: 4rem;
+    text-align: center;
+    font-size: 5rem; 
 }
 
-.box-container span{
-    font-weight: bold;
-    font-size: 1.9rem;
+.medios-contacto .box-container .box .content{
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 3.5rem;
 }
 
-.icon img{
-    width: 50px;
-    height: 50px;
-}
-
-/*MEDIA QUERY*/
-
-@media (max-width:991px) {
-
-    section{
-        padding: 1rem;
-    }
-
-    .home{
-        background-position: auto;
-    }
-
-}
-
-@media (max-width:768px) {
-
-    .home{
-        min-height: 90vh;
-    }
-
-    .home .content{
-        padding: 1.5rem;
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
-        margin: 0.5 auto;
-    }
-
-    .home .content img{
-        height: auto; width: auto;
-    }
-
-    .home .content span{
-        padding: 0.5rem 0;
-    }
-}
-
-@media (max-width: 680px) and (min-width: 451px) {
-    .home{
-        min-height: 85vh;
-    }
-
-    .home .content{
-        padding: 1rem;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-        margin: 0 auto;
-    }
-
-    .home .content img{
-        height: auto; width: 400px;
-    }
-
-    .home .content span{
-        padding: 0.5rem 0;
-        font-size: 22px;
-    }
-}
-
-@media (max-width:450px) and (min-width: 250px){
-
-    .home{
-        min-height: 80vh;
-    }
-
-    .home .content{
-        padding: 1rem;
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    .home .content img{
-        height: auto; width: 250px;
-    }
-
-    .home .content span{
-        padding: 0.5rem 0;
-        font-size: 18px;
-    }
-
+.medios-contacto .box-container .box .content h2{
+    font-size: 2.3rem;
 }

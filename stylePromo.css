@@ -1,7 +1,7 @@
 /*HERO DE CATEGORIA*/
 
 .hero-product{
-    background: url(images/HeroPromociones.png) no-repeat center center/cover; 
+    background: url(images/Hero/HeroPromociones.png) no-repeat center center/cover; 
     display: flex;
     align-items: center;
     padding-left: 5%;

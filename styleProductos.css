@@ -3,8 +3,9 @@
 .hero-product h1{
     font-size: 10rem;
     font-family: "Cormorant Garamond";
-    color: #2C2C2C;
+    color: var(--texto);
     padding: 10px 20px;
+    background: var(--bg-hero);
 }
 
 /*PRODUCTOS*/
@@ -13,7 +14,6 @@
     display: block;
     margin-top: 20px;
 }
-
 
 /*SECCION DE PRODUCTOS*/
 
@@ -34,15 +34,22 @@
     flex-direction: column;
     gap: 15px;
     align-items: center;
-    background-color: #F0E2F7;
-    border: 2px solid #C6B5E9;
+    background-color: var(--bg-card);
+    border: 2px solid var(--lila);
     transition: .4s; /*Movimiento smooth para cuando se sale el cursor de encima*/
+}
+
+.catalogo .box-container .box:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: .4s; /*Hace que el movimiento sea más smooth*/
+    box-shadow: 0 8px 20px var(--shadow);
 }
 
 .catalogo .box-container .box .img img {
     width: 500px; 
     height: auto;
-    border: 1px solid #6B5A73;
+    border: 1px solid --borde-btn;
 }
 
 .catalogo .box-container .box .content {
@@ -66,7 +73,7 @@
     font-size: 2rem;
     padding-top: 20px;
     font-weight: bold;
-    color: #6B5A73; 
+    color: var(--texto); 
     margin-top: 5px;
 }
 
@@ -85,7 +92,7 @@
     .catalogo .box-container .box .img img{
         width: 300px; height: auto;
         cursor: pointer;
-        border: 1px solid #2C2C2C;
+        border: 1px solid var(--borde-negro);
     }
 
     .catalogo .box-container .box .content{
@@ -128,7 +135,7 @@
     .catalogo .box-container .box .img img{
         width: 300px; height: auto;
         cursor: pointer;
-        border: 1px solid #2C2C2C;
+        border: 1px solid var(--borde-negro);
     }
 
     .catalogo .box-container .box .content{

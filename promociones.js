@@ -1,3 +1,34 @@
+// BASE DE DATOS DE PRODUCTOS
+const Catalogo = {
+    "acolchado_queen_hojas": { nombre: "Acolchado Queen Hojas", precio: 299990, img: "images/Acolchados/" },
+    "acolchado_queen_plush": { nombre: "Acolchado Queen Plush", precio: 249990, img: "images/Acolchados/" },
+    "acolchado_1p_dragones": { nombre: "Acolchado 1 Plaza Dragones", precio: 129990, img: "images/Acolchados/" },
+    /*"acolchado_": { nombre: "Acolchado ", precio: , img: "images/Acolchados/" },
+    "acolchado_": { nombre: "Acolchado ", precio: , img: "images/Acolchados/" },
+    "acolchado_": { nombre: "Acolchado ", precio: , img: "images/Acolchados/" },
+    "acolchado_": { nombre: "Acolchado ", precio: , img: "images/Acolchados/" },
+    "acolchado_": { nombre: "Acolchado ", precio: , img: "images/Acolchados/" },
+    "acolchado_": { nombre: "Acolchado ", precio: , img: "images/Acolchados/" },*/
+    "cubrecama_king_hojas_cerezo":{ nombre: "Cubrecama King de Gasa Hojas de Cerezo", precio: 269990, img:"images/Cubrecamas/" },
+    "cubrecama_king_heatpress_hojas":{ nombre: "Cubrecama King Heatpress Hojas", precio: 217990, img:"images/Cubrecamas/" },
+    "cubrecama_king_reversible_palmeras":{ nombre: "Cubrecama King Reversible Bordado Palmeras", precio: 274990, img:"images/Cubrecamas/" },
+    "cubrecama_queen_reversible_ondas":{ nombre: "Cubrecama Queen Extra Suave Reversible Ondas", precio: 217990, img:"images/Cubrecamas/" },
+    "cubrecama_twin_jas":{ nombre: "Cubrecama Twin Reversible Búlgaro Jazmín", precio: 99990, img:"images/Cubrecamas/" },
+    "cubrecama_queen_cuadros":{ nombre: "Cubrecama Queen Reversible Costuras a Cuadros", precio: 199990, img:"images/Cubrecamas/" },
+    "frazada_1p_brilla_hojas":{ nombre: "Frazada 1 Plaza Brilla en la Oscuridad Hojas", precio: 64990, img:"images/Frazadas" },
+    "frazada_king_jacquard_lisa":{ nombre: "Frazada King Jacquard Flannel Fleece Lisa", precio: 109990, img:"images/Frazadas" },
+    "frazada_king_baby":{ nombre: "Frazada King Baby Skin Lisa", precio: 109990, img:"images/Frazadas/" },
+    "frazada_king_coral":{ nombre: "Frazada King Coral Fleece Lisa", precio: 67990, img:"images/Frazadas/" },
+    "frazada_queen_jacquard": { nombre: "Frazada Queen Jacquard", precio: 59994, img: "images/Frazadas/" },
+    "frazada_1p_plush": { nombre: "Frazada 1 Plaza Plush y Polar Liso", precio: 59994, img: "images/Frazadas/" },
+    "sabana_extraqueen_blend":{ nombre: "Sábanas Extra Queen Algodón Blend Liso", precio: 119990, img:"images/Frazadas/" },
+    "sabana_twin_blend":{ nombre: "Sábanas Twin Algodón Blend Liso", precio: 77990, img:"images/Sábanas/" },
+    "sabana_1p_blend":{ nombre: "Sábanas 1 Plaza Algodón Blend Liso", precio: 64990, img:"images/Sábanas/" },
+    "sabana_queen_bulgaro":{ nombre: "Sábanas Queen Búlgaro Cálido", precio: 69990, img:"images/Sábanas/" },
+    "sabana_king_espiga":{ nombre: "Sábanas King Extra Suave Espiga Punteada", precio: 129990, img:"images/Sábanas/" },
+    "sabana_king_flores":{ nombre: "Sábanas King Flores Orellanas ", precio: 84990, img:"images/Sábanas/" }
+};
+
 const eliminarProducto = (filaId) => {
     const fila = document.getElementById(filaId);
     if (fila) {

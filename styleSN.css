@@ -51,7 +51,7 @@
 .desc h1 {
     font-style: italic;
     font-size: 3.6rem; 
-    color: #6B5A73;
+    color: var(--texto);
     font-family: "Cormorant Garamond";
     font-weight: bold;
     margin-top: 30px;
@@ -118,13 +118,12 @@
 .fechas .box-container h1{
     font-size: 6rem;
     font-weight: bold;
-    color: #6B5A73;
+    color: var(--texto);
     padding: 1.5rem;
 }
 
 .fechas .box-container .primera,
 .segunda{
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
     padding: 20px;
     box-sizing: border-box;
     display: flex;
@@ -133,6 +132,16 @@
     gap: 15px;
     align-items: center;
     text-align: center;
+    transition: .4s; /*Hace que el movimiento sea más smooth*/
+    background-color: var(--bg-card);
+    border-radius: 5%;
+}
+
+.fechas .box-container .primera:hover,
+.segunda:hover{
+    transform: scale(1.05);
+    transition: .4s; /*Hace que el movimiento sea más smooth*/
+    box-shadow: 0 8px 20px var(--shadow);
 }
 
 .fechas .box-container .primera p,

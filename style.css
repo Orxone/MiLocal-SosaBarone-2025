@@ -1,7 +1,9 @@
+
+
 /*CONTENIDO DE LA PÁGINA*/
 
 .home{
-    background-color: #F7F7F7;
+    background-color: var(--bg-body);
     display: flex;
     justify-items: center;
     align-items: center;
@@ -12,7 +14,7 @@
 }
 
 .home .content{
-    background: rgba(247, 247, 247, 0.7);
+    background: var(--bg-hero);
     padding: 3rem;
     padding-left: 5rem;
     padding-right: 5rem;
@@ -22,7 +24,7 @@
     padding:  1rem 0;
     font-size: 3rem;
     line-height: 1.5;
-    color: #6B5A73;
+    color: var(--texto);
 }
 
 /*SECCION DE PRODUCTOS*/
@@ -43,17 +45,16 @@
     flex-direction: column;
     gap: 15px;
     align-items: center;
-    border: 2px solid #C6B5E9;
+    border: 2px solid var(--borde-card);
     transition: .4s; /*Movimiento smooth para cuando se sale el cursor de encima*/
-    background-color: #F0E2F7; 
+    background-color: var(--bg-card); 
 }
 
 .novedades .box-container .box:hover{
     cursor: pointer;
     transform: scale(1.05);
     transition: .4s; /*Hace que el movimiento sea más smooth*/
-    background-color:rgba(240, 240, 240, 0.7);  
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px var(--shadow);
 }
 
 .novedades h1{
@@ -86,7 +87,7 @@
 }
 
 .promos .box-container-link:hover{
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px var(--shadow);
     transform: translateY(-5px);
     transition: .4s; /*Hace que el movimiento sea más smooth*/
     border: 3px solid var(--borde-card);
@@ -111,7 +112,6 @@
 }
 
 .medidas .box-container .box{
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
     padding: 20px;
     box-sizing: border-box;
     flex: 1 1 calc(20% - 40px);
@@ -120,10 +120,10 @@
     gap: 15px;
     align-items: center;
     cursor: pointer;
-    border: 2px solid #C6B5E9;
+    border: 2px solid var(--lila);
     border-radius: 5%;
     transition: .4s; /*Movimiento smooth para cuando se sale el cursor de encima*/
-    background-color: #F0E2F7; 
+    background-color: var(--bg-card); 
 }
 
 .medidas h1{
@@ -137,12 +137,11 @@
     cursor: pointer;
     transform: scale(1.05);
     transition: .4s; /*Hace que el movimiento sea más smooth*/
-    background-color:rgba(240, 240, 240, 0.7);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px var(--shadow);
 }
 
 .medidas .box-container .box .content h2{
-    color: #2C2C2C;
+    color: var(--texto);
 }
 
 .medidas .box-container .box .content{
@@ -170,10 +169,10 @@
 }
 
 .nosotros-info .box-container-link:hover{
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px var(--shadow);
     transform: translateY(-5px);
     transition: .4s; /*Hace que el movimiento sea más smooth*/
-    border: 3px solid #A7C7E7;
+    border: 3px solid var(--celeste);
 }
 
 .nosotros-info .imagen{
@@ -205,6 +204,8 @@
     font-weight: bold;
     margin-bottom: 10px;
     line-height: 2;
+    color: var(--texto-over-img);
+
 }
 
 .nosotros-info p {
@@ -213,6 +214,8 @@
     font-weight: 540;
     margin-left: auto;
     max-width: 500px;
+    color: var(--texto-over-img);
+
 }
 
 /*SECCION DE BANCOS*/
@@ -226,13 +229,14 @@
 }
 
 .bancos .box-container .box{
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #F0E2F7; 
+    background-color: var(--bg-card); 
     border-radius: 5%;
-    border: 2px solid #C6B5E9;
+    border: 2px solid var(--lila);
+    cursor: pointer;
+    transition: .4s; /*Movimiento smooth para cuando se sale el cursor de encima*/
 }
 
 .bancos h1{
@@ -242,17 +246,11 @@
     font-size: 4rem;
 }
 
-.bancos .box-container .box .img{
-    cursor: pointer;
-    transition: .4s; /*Movimiento smooth para cuando se sale el cursor de encima*/
-}
-
-.bancos .box-container .box .img:hover{
+.bancos .box-container .box:hover{
     transform: scale(1.05);
     transition: .4s; /*Hace que el movimiento sea más smooth*/
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px var(--shadow);
 }
-
 
 /*MEDIA QUERY*/
 

@@ -5,35 +5,49 @@
     text-decoration: none;
     font-family: "Monserrat";
     transition: .2s smooth;
-    color: #2C2C2C;
+    color: var(--texto-principal);
 }
 
 :root{
-    --body: #F7F7F7;
-    --banner: #c0a0ff;
+    --bg-body: #F7F7F7;
+    --bg-banner: #c0a0ff;
+    --bg-hero: rgba(247, 247, 247, 0.7);
     --texto-principal: #2C2C2C;
     --texto-hover: #F2E6D8;
     --texto-btn: #2C2C2C;
-    --nav-footer: #A7C7E7;
-    --lila: #C6B5E9;
-    --bg-card: transparent;
+    --texto: #685A73;
+    --texto-over-img:#2C2C2C;
+	--nav-btn: #A7C7E7;
+    --footer: #A7C7E7;
+    --bg-card: #F0E2F7;
     --borde-card: #C6B5E9;
     --borde-btn: #685A73;
+    --borde-negro: #2C2C2C;
+    --lila: #C6B5E9;
+    --celeste: #A7C7E7;
+    --shadow: rgba(0, 0, 0, 0.2);
 }
 
 /*COLORES DEL MODO OSCURO*/
 
 .dark-mode {
-    --body: #1F1B24;
-    --banner: #5E5078;
-    --texto-principal: #E6E1F0;
-    --texto-hover: #C6B5E9;
-    --texto-btn: #E6E1F0;
-    --nav-footer: #38618a;
-    --lila: #C6B5E9;
-    --bg-card: #C6B5E9;
-    --borde-card: #4A435C;
-    --borde-btn: #4A435C;
+    --bg-body: #131324;
+    --bg-banner: #8A63D2;
+    --bg-hero: rgba(54, 54, 83, 0.9);
+    --bg-card: #271c2f;
+    --nav-btn: #2A2A3D;
+    --footer: #1A1A26;
+    --texto-principal: #F2E6D8;
+    --texto-hover: #c0a0ff;
+    --texto-btn: #F2E6D8;
+    --texto: #B4A7C5;
+    --texto-over-img: #2C2C2C;
+    --borde-card: #423D57;
+    --borde-btn: #C6B5E9;
+    --borde-negro: #F2E6D8;
+    --lila: #A55DA6;
+    --celeste: #265388;
+    --shadow: rgba(255, 255, 255, 0.3); 
 }
 
 /*TECLADO*/
@@ -53,7 +67,7 @@ html{
 
 body{
     /*min-height: 100vh;*/
-    background-color: #F7F7F7;
+    background-color: var(--bg-body);
 }
 
 img{
@@ -67,24 +81,24 @@ section{
 }
 
 header{
-    background-color: #F7F7F7;
+    background-color: var(--bg-body);
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 999; /*Fuerza a que se coloque en una capa diferente*/
-    box-shadow: 0.5rem 0.2rem rgba(0, 0, 0, .1);
+    box-shadow: 0.5rem 0.2rem --shadow;
 }
 
 /*BANNER DE PROMOCIÓN*/
 
 header .banner{
-    background-color: #c0a0ff;
+    background-color: var(--bg-banner);
 }
 
 header .banner a {
     display: block; /*Hace que el link ocupe todo el ancho (como un div)*/
     padding: 0.3rem;
     text-align: center;
-    color: #2C2C2C;
+    color: var(--texto-principal);
     font-size: 1.7rem;
     font-weight: 1000;
     font-family: "Cormorant Garamond";
@@ -92,8 +106,8 @@ header .banner a {
 }
 
 header .banner:hover{
-    background-color: #A7C7E7;
-    color: #F2E6D8;
+    background-color: var(--celeste);
+    color: var(--texto-hover);
 }
 
 header .header-up{
@@ -105,6 +119,15 @@ header .header-up{
 
 header .header-up .logo{
     margin-right: auto;
+    transition: .4s; /*Movimiento smooth para cuando se sale el cursor de encima*/
+    margin-left: 1.5rem;
+}
+
+header .header-up .logo img:hover{
+    border: solid var(--borde-btn) 0.2rem;
+    border-radius: 50%;
+    padding: 0.2rem;
+    transition: .4s; /*Movimiento smooth para cuando está el cursor encima*/
 }
 
 header .header-up img{
@@ -115,14 +138,26 @@ header .header-up img{
 
 header .header-up .icons{
     margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-header .header-up .icons a{
-    margin-left: 1.5 rem;
+header .header-up .icons button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
 }
 
-header .header-up .icons a:hover, .icons a:active{
-    border-bottom: 0.5rem solid #C6B5E9;
+header .header-up .icons img:hover, 
+.icons img:active
+{
+    border: solid var(--borde-btn) 0.2rem;
+    border-radius: 50%;
+    padding: 0.2rem;
+    transition: .4s; /*Movimiento smooth para cuando está el cursor encima*/
 }
 
 /*BOTONES DE NAVEGACIÓN*/
@@ -136,9 +171,8 @@ header .navbar ul{
 }
 
 header .navbar a{
-    color: #6B5A73;
-    border: 0.2rem solid #A7C7E7;
-    background-color: #A7C7E7;
+    color: var(--texto);
+    background-color: var(--celeste);
     padding: 0 2em;
     display: flex;
     align-items: center;
@@ -147,19 +181,18 @@ header .navbar a{
 }
 
 header .navbar a:hover{
-    background-color: #C6B5E9;
-    border: solid #6B5A73 0.2rem;
-    color: #F2E6D8;
+    background-color: var(--lila);
+    border: solid var(--borde-btn) 0.2rem;
+    color: var(--texto-hover);
 }
 
 /*MENÚ HAMBURGUESA*/
 
 #burger-btn {
     font-size: 3rem;
-    color: #6B5A73;
+    color: var(--texto);
     cursor: pointer;
     display: none;
-    margin-left: 1.5rem;
 }
 
 
@@ -181,9 +214,9 @@ header .navbar a:hover{
     display: flex; 
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 4px 12px var(--shadow);
     text-decoration: none;
-    background-color: #F7F7F7;
+    background-color: var(--bg-body);
 }
 
 .whatsapp-bubble {
@@ -192,7 +225,7 @@ header .navbar a:hover{
 }
 
 .whatsapp-flotante:hover {
-    background-color: #c0a0ff;
+    background-color: var(--lila);
     transform: scale(1.1); 
 }
 
@@ -200,7 +233,7 @@ header .navbar a:hover{
 /*FOOTER*/
 
 footer{
-    background-color: #A7C7E7;
+    background-color: var(--footer);
 }
 
 footer .menu-footer{
@@ -243,7 +276,7 @@ footer .info ul li,
 
 footer .info ul li a:hover, 
 .otra-info ul li a:hover{
-    color: #F2E6D8;
+    color: var(--texto-hover);
     text-decoration: underline;
 }
 
@@ -255,12 +288,12 @@ footer .suscripcion .box{
     outline: none;
     background: none;
     border: none;
-    border-bottom: 2px solid #2C2C2C;
+    border-bottom: 2px solid var(--borde-negro);
 }
 
 footer .btn{
     background-color: rgba(0, 0, 0, 0);
-    border: .1rem solid #2C2C2C;
+    border: .1rem solid var(--borde-negro);
     margin-left: 1rem;
     padding: 0.5rem;
     padding-left: 0.9rem;
@@ -271,9 +304,9 @@ footer .btn{
 }
 
 footer .btn:hover{
-    background-color: #C6B5E9;
-    color: #F2E6D8;
-    border: .1rem solid #6B5A73;
+    background-color: var(--lila);
+    color: var(--texto-hover);
+    border: .1rem solid var(--borde-btn);
 }
 
 footer .iconos-footer{
@@ -312,7 +345,7 @@ footer .copyright{
     padding-right: 3rem;
     font-size: 1.4rem;
     font-style: italic;
-    color: #6B5A73;
+    color: var(--texto);
 }
 
 /*MEDIA QUERY*/
@@ -369,9 +402,9 @@ footer .copyright{
         top: 100%;
         left: 0;
         right: 0;
-        background-color: #F7F7F7;
+        background-color: var(--bg-body);
         border-top: 1px solid #ccc;
-        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+        box-shadow: 0 0.5rem 1rem var(--shadow);
     }
 
     /*SE CONVIERTEN LOS BOTONES DE LAS PESTAÑAS EN COLUMNAS*/

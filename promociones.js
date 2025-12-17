@@ -1,32 +1,68 @@
-// BASE DE DATOS DE PRODUCTOS
-const Catalogo = {
-    "acolchado_queen_hojas": { nombre: "Acolchado Queen Hojas", precio: 299990, img: "images/Acolchados/" },
-    "acolchado_queen_plush": { nombre: "Acolchado Queen Plush", precio: 249990, img: "images/Acolchados/" },
-    "acolchado_1p_dragones": { nombre: "Acolchado 1 Plaza Dragones", precio: 129990, img: "images/Acolchados/" },
-    /*"acolchado_": { nombre: "Acolchado ", precio: , img: "images/Acolchados/" },
-    "acolchado_": { nombre: "Acolchado ", precio: , img: "images/Acolchados/" },
-    "acolchado_": { nombre: "Acolchado ", precio: , img: "images/Acolchados/" },
-    "acolchado_": { nombre: "Acolchado ", precio: , img: "images/Acolchados/" },
-    "acolchado_": { nombre: "Acolchado ", precio: , img: "images/Acolchados/" },
-    "acolchado_": { nombre: "Acolchado ", precio: , img: "images/Acolchados/" },*/
-    "cubrecama_king_hojas_cerezo":{ nombre: "Cubrecama King de Gasa Hojas de Cerezo", precio: 269990, img:"images/Cubrecamas/" },
-    "cubrecama_king_heatpress_hojas":{ nombre: "Cubrecama King Heatpress Hojas", precio: 217990, img:"images/Cubrecamas/" },
-    "cubrecama_king_reversible_palmeras":{ nombre: "Cubrecama King Reversible Bordado Palmeras", precio: 274990, img:"images/Cubrecamas/" },
-    "cubrecama_queen_reversible_ondas":{ nombre: "Cubrecama Queen Extra Suave Reversible Ondas", precio: 217990, img:"images/Cubrecamas/" },
-    "cubrecama_twin_jas":{ nombre: "Cubrecama Twin Reversible Búlgaro Jazmín", precio: 99990, img:"images/Cubrecamas/" },
-    "cubrecama_queen_cuadros":{ nombre: "Cubrecama Queen Reversible Costuras a Cuadros", precio: 199990, img:"images/Cubrecamas/" },
-    "frazada_1p_brilla_hojas":{ nombre: "Frazada 1 Plaza Brilla en la Oscuridad Hojas", precio: 64990, img:"images/Frazadas" },
-    "frazada_king_jacquard_lisa":{ nombre: "Frazada King Jacquard Flannel Fleece Lisa", precio: 109990, img:"images/Frazadas" },
-    "frazada_king_baby":{ nombre: "Frazada King Baby Skin Lisa", precio: 109990, img:"images/Frazadas/" },
-    "frazada_king_coral":{ nombre: "Frazada King Coral Fleece Lisa", precio: 67990, img:"images/Frazadas/" },
-    "frazada_queen_jacquard": { nombre: "Frazada Queen Jacquard", precio: 59994, img: "images/Frazadas/" },
-    "frazada_1p_plush": { nombre: "Frazada 1 Plaza Plush y Polar Liso", precio: 59994, img: "images/Frazadas/" },
-    "sabana_extraqueen_blend":{ nombre: "Sábanas Extra Queen Algodón Blend Liso", precio: 119990, img:"images/Frazadas/" },
-    "sabana_twin_blend":{ nombre: "Sábanas Twin Algodón Blend Liso", precio: 77990, img:"images/Sábanas/" },
-    "sabana_1p_blend":{ nombre: "Sábanas 1 Plaza Algodón Blend Liso", precio: 64990, img:"images/Sábanas/" },
-    "sabana_queen_bulgaro":{ nombre: "Sábanas Queen Búlgaro Cálido", precio: 69990, img:"images/Sábanas/" },
-    "sabana_king_espiga":{ nombre: "Sábanas King Extra Suave Espiga Punteada", precio: 129990, img:"images/Sábanas/" },
-    "sabana_king_flores":{ nombre: "Sábanas King Flores Orellanas ", precio: 84990, img:"images/Sábanas/" }
+const CATALOGO = {
+    //ACOLCHADOS
+    
+        //KING
+        "acolchado_king_jacquard_flannel": { nombre: "Acolchado King Jacquard Flannel con Corderito", precio: 284990, img: "images/Acolchados/Acolchado King Jacquard Flannel con Corderito.png" },
+        "acolchado_king_liso": { nombre: "Acolchado King Reversible Liso", precio: 119990, img: "images/Acolchados/Acolchado King Reversible Liso.png" },
+
+        //QUEEN
+        "acolchado_queen_hojas": { nombre: "Acolchado Queen Hojas", precio: 299990, img: "images/Acolchados/Acolchado Queen Hojas Embossed.png" },
+        "acolchado_queen_plush": { nombre: "Acolchado Queen Plush", precio: 249990, img: "images/Acolchados/Acolchado Queen Plush Velvet Liso.png" },
+        "acolchado_queen_plumon": { nombre: "Plumón Queen Reversible Ramas de Olivo", precio: 269990, img: "images/Acolchados/Plumón Queen Reversible Ramas de Olivo.png" },
+
+        //TWIN
+        "acolchado_twin_liso": { nombre: "Acolchado Twin Atraques de Puntos Liso", precio: 179990, img: "images/Acolchados/Acolchado Twin Atraques de Puntos Liso.png" },
+        "acolchado_twin_flor": { nombre: "Acolchado Twin con Corderito Sensitive Plush Flor", precio: 189990, img: "images/Acolchados/Acolchado Twin con Corderito Sensitive Plush Flor.png" },
+
+        //1 PLAZA
+        "acolchado_1p_dragones": { nombre: "Acolchado 1 Plaza Dragones", precio: 129990, img: "images/Acolchados/Acolchado 1 Plaza con Corderito Repujado Dragones.png" },
+        "acolchado_1p_liso": { nombre: "Acolchado 1 Plaza Reversible Liso", precio: 64990, img: "images/Acolchados/Acolchado 1 Plaza Reversible Liso.png" },
+
+    //CUBRECAMAS
+
+        //KING
+        "cubrecama_king_hojas_cerezo":{ nombre: "Cubrecama King de Gasa Hojas de Cerezo", precio: 269990, img:"images/Cubrecamas/Cubrecama King de Gasa Hojas de Cerezo.png" },
+        "cubrecama_king_heatpress_hojas":{ nombre: "Cubrecama King Heatpress Hojas", precio: 217990, img:"images/Cubrecamas/Cubrecama King Heatpress Hojas.png" },
+        "cubrecama_king_reversible_palmeras":{ nombre: "Cubrecama King Reversible Palmeras", precio: 274990, img:"images/Cubrecamas/Cubrecama King Reversible Bordado Palmeras.png" },
+
+        //QUEEN
+        "cubrecama_queen_reversible_ondas":{ nombre: "Cubrecama Queen Extra Suave Reversible Ondas", precio: 217990, img:"images/Cubrecamas/Cubrecama Queen Extra Suave Reversible Ondas.png" },
+        "cubrecama_queen_cuadros":{ nombre: "Cubrecama Queen Reversible a Cuadros", precio: 199990, img:"images/Cubrecamas/Cubrecama Queen Reversible Costuras a Cuadros.png" },
+
+        //TWIN
+        "cubrecama_twin_jazmin":{ nombre: "Cubrecama Twin Reversible Búlgaro Jazmín", precio: 99990, img:"images/Cubrecamas/Cubrecama Twin Reversible Búlgaro Jazmín.png" },
+
+
+    //FRAZADAS
+        //KING
+        "frazada_king_jacquard_lisa":{ nombre: "Frazada King Jacquard Flannel Fleece", precio: 109990, img:"images/Frazadas/Frazada King Jacquard Flannel Fleece Lisa.png" },
+        "frazada_king_baby":{ nombre: "Frazada King Baby Skin", precio: 109990, img:"images/Frazadas/Frazada King Baby Skin Lisa.png" },
+        "frazada_king_coral":{ nombre: "Frazada King Coral Fleece", precio: 67990, img:"images/Frazadas/Frazada King Coral Fleece Lisa.png" },
+
+        //QUEEN
+        "frazada_queen_jacquard": { nombre: "Frazada Queen Jacquard", precio: 59994, img: "images/Frazadas/Frazada Queen Jacquard Flannel Fleece Lisa.png" },
+
+        //1 PLAZA
+        "frazada_1p_brilla_hojas":{ nombre: "Frazada 1 Plaza Brilla en la Oscuridad Hojas", precio: 64990, img:"images/Frazadas/Frazada 1 Plaza Brilla en la Oscuridad Hojas.png." },
+        "frazada_1p_plush": { nombre: "Frazada 1 Plaza Plush Liso", precio: 59994, img: "images/Frazadas/Frazada 1 Plaza Plush y Polar Liso.png" },
+
+
+    //SÁBANAS
+        //KING
+        "sabana_king_espiga":{ nombre: "Sábanas King Extra Suave Espiga Punteada", precio: 129990, img:"images/Sábanas/Juego de Sábanas King Extra Suave Espiga Punteada.png" },
+        "sabana_king_flores":{ nombre: "Sábanas King Flores Orellanas ", precio: 84990, img:"images/Sábanas/Juego de Sábanas King Flores Orellanas.png" },
+
+        //EXTRA QUEEN
+        "sabana_extraqueen_liso":{ nombre: "Sábanas Extra Queen Liso", precio: 119990, img:"images/Sábanas/Juego de Sábanas Extra Queen Algodón Blend Liso.png" },
+
+        //QUEEN
+        "sabana_queen_bulgaro":{ nombre: "Sábanas Queen Búlgaro Cálido", precio: 69990, img:"images/Sábanas/Juego de Sábanas Queen Búlgaro Cálido.png" },
+
+        //TWIN
+        "sabana_twin_liso":{ nombre: "Sábanas Twin Algodón Liso", precio: 77990, img:"images/Sábanas/Juego de Sábanas Twin Algodón Blend Liso.png" },
+
+        //1 PLAZA
+        "sabana_1p_liso":{ nombre: "Sábanas 1 Plaza Algodón Liso", precio: 64990, img:"images/Sábanas/Juego de Sábanas 1 Plaza Algodón Blend Liso.png" },
 };
 
 const eliminarProducto = (filaId) => {
@@ -57,57 +93,73 @@ const formatearMoneda = (numero) => {
 
 //GESTIÓN DEL FORMULARIO
 
-//Función para agregar una nueva fila de producto y al final botón de eliminar producto
+//Función auxiliar para crear las opciones del select desde el catalogo
+const generarOpcionesHTML = () => {
+    let opciones = '<option value="" disabled selected>Seleccioná un producto</option>';
+
+    for (const id in CATALOGO) {
+        const prod = CATALOGO[id];
+        //Se usa el ID como valor, no el precio.
+        opciones += `<option value="${id}">${prod.nombre} (${formatearMoneda(prod.precio)})</option>`;
+    }
+    return opciones;
+};
+
+//Función para actualizar la imagen cuando el usuario cambia el select
+
+const actualizarImagenFila = (selectElement, imgId) => {
+    const productoId = selectElement.value;
+    const imgElement = document.getElementById(imgId);
+    
+    if (CATALOGO[productoId]) {
+        imgElement.src = CATALOGO[productoId].img;
+        imgElement.style.display = 'block'; //Muestra la imagen
+
+    } else {
+        imgElement.style.display = 'none'; //Oculta si no hay selección
+    }
+
+    calcularTotal(); //Recalcula precios
+};
+
+// Función agregar producto
 const agregarProducto = () => {
     contadorProductos++;
     const contenedor = document.getElementById('productos-agregados');
     
     const nuevaFila = document.createElement('div');
     const nuevaFilaId = `fila-${contadorProductos}`;
+    const imgId = `img-${contadorProductos}`; // ID único para la imagen
+    
     nuevaFila.classList.add('producto-fila');
     nuevaFila.id = nuevaFilaId;
+    
     nuevaFila.innerHTML = `
-        <label for="producto-${contadorProductos}">Producto:</label>
-        <select id="producto-${contadorProductos}" class="select-producto" onchange="calcularTotal()">
-                <option value="299990">Acolchado Queen Hojas ($299.990)</option>
-                <option value="249990">Acolchado Queen Plush ($249.990)</option>
-                <option value="129990">Acolchado 1 Plaza Dragones ($129.990)</option>
-                <option value="64990">Acolchado 1 Plaza Liso ($64.990)</option>
-                <option value="269990">Cubrecama King de Gasa Hojas de Cerezo ($269.990)</option>
-                <option value="217990">Cubrecama King Heatpress Hojas ($217.990)</option>
-                <option value="274990">Cubrecama King Reversible Bordado Palmeras ($274.990)</option>
-                <option value="217990">Cubrecama Queen Extra Suave Reversible Ondas ($217.990)</option>
-                <option value="99990">Cubrecama Twin Reversible Búlgaro Jazmín ($99.990)</option>
-                <option value="199990">Cubrecama Queen Reversible Costuras a Cuadros ($199.990)</option>
-                <option value="64990">Frazada 1 Plaza Brilla en la Oscuridad Hojas ($64.990)</option>
-                <option value="59994">Frazada Queen Jacquard Flannel Fleece Lisa ($59.994)</option>
-                <option value="109990">Frazada King Jacquard Flannel Fleece Lisa ($109.990)</option>
-                <option value="109990">Frazada King Baby Skin Lisa ($109.990)</option>
-                <option value="67990">Frazada King Coral Fleece Lisa ($67.990)</option>
-                <option value="59994">Frazada 1 Plaza Plush y Polar Liso ($59.994)</option>
-                <option value="119990">Juego de Sábanas Extra Queen Algodón Blend Liso ($119.990)</option>
-                <option value="77990">Juego de Sábanas Twin Algodón Blend Liso ($77.990)</option>
-                <option value="64990">Juego de Sábanas 1 Plaza Algodón Blend Liso ($64.990)</option>
-                <option value="69990">Juego de Sábanas Queen Búlgaro Cálido ($69.990)</option>
-                <option value="129990">Juego de Sábanas King Extra Suave Espiga Punteada ($129.990)</option>
-                <option value="84990">Juego de Sábanas King Flores Orellanas ($84.990)</option>
-        </select>
+        <img src="" alt="Producto" id="${imgId}" class="img-preview" style="display:none;">
+
+        <div style="flex-grow: 1; display:flex; flex-direction:column; gap:5px;">
+            <label for="producto-${contadorProductos}">Producto:</label>
+            <select id="producto-${contadorProductos}" class="select-producto" onchange="actualizarImagenFila(this, '${imgId}')">
+                ${generarOpcionesHTML()}
+            </select>
+        </div>
         
-        <label for="cantidad-${contadorProductos}">Cantidad:</label>
-        <input type="number" id="cantidad-${contadorProductos}" class="input-cantidad" value="1" min="1" onchange="calcularTotal()">
+        <div style="display:flex; flex-direction:column; gap:5px; margin-left: 10px;">
+            <label for="cantidad-${contadorProductos}">Cant:</label>
+            <input type="number" id="cantidad-${contadorProductos}" class="input-cantidad" value="1" min="1" onchange="calcularTotal()">
+        </div>
         
-        <button type="button" class="btn-eliminar" onclick="eliminarProducto('${nuevaFilaId}')">
+        <button type="button" class="btn-eliminar" onclick="eliminarProducto('${nuevaFilaId}')" title="Eliminar">
             X
         </button>
-        `;
+    `;
     
     contenedor.appendChild(nuevaFila);
-    calcularTotal();
 };
 
 //LÓGICA DE CÁLCULO DE PROMOCIONES
 
-//Se ordena de mayor a menor y se descuenta el 50% de cada segundo ítem.//
+//Se ordena de mayor a menor y se descuenta el 50% de cada segundo ítem.
 function aplicar20EnSegundoNoAcumulable(productosCompra) {
     let descuento = 0;
     
@@ -132,13 +184,14 @@ function aplicar20EnSegundoNoAcumulable(productosCompra) {
     return descuento;
 }
 
-//Aplica 3x2 a productos seleccionados (precio < $70.000).//
+//Aplica 3x2 a productos seleccionados (precio < $70.000).
 function aplicar3x2(productosCompra) {
     let descuento = 0;
     
-    //Crea una lista SÓLO con los precios de productos que aplican
+    //Crea una lista solo con los precios de productos que aplican
     let preciosUnitarios = [];
     productosCompra.forEach(p => {
+        
         //Restricción para que solo se aplique a productos menores a $70.000
         if (p.precio < 70000) { 
             for (let i = 0; i < p.cantidad; i++) {
@@ -151,11 +204,11 @@ function aplicar3x2(productosCompra) {
         return 0;
     }
 
-    //Ordenar de menor a mayor (para regalar el más barato del grupo de 3)
+    //Ordena de menor a mayor (para regalar el más barato del grupo de 3)
     preciosUnitarios.sort((a, b) => a - b); 
     
     /*Aplica descuento (regalar el tercero, sexto, noveno...)
-    El índice 2 corresponde al tercer ítem (0, 1, 2) */
+    El índice 2 corresponde al tercer ítem (0, 1, 2)*/
     for (let i = 2; i < preciosUnitarios.length; i += 3) {
         descuento += preciosUnitarios[i];
     }
@@ -171,23 +224,24 @@ function aplicar15PorCientoMonto(productosCompra, totalSinDesc) {
     return 0;
 }
 
+//CÁLCULO DE TOTAL
+
 const calcularTotal = () => {
-    
-    //Se consiguen los datos
     const productosFilas = document.querySelectorAll('.producto-fila');
     let totalSinDescuento = 0;
-    let productosCompra = []; //Array de objetos (precio, cantidad)
+    let productosCompra = []; 
 
     productosFilas.forEach(fila => {
-        //Se agarran los select y inputs dentro de cada fila
         const select = fila.querySelector('.select-producto');
         const input = fila.querySelector('.input-cantidad');
         
-        //Se confirma que los valores sean números
-        const precio = parseFloat(select.value);
+        const productoId = select.value; //Se consigue el ID (ej: "acolchado_queen_hojas")
         const cantidad = parseInt(input.value);
         
-        if (cantidad > 0 && !isNaN(precio) && !isNaN(cantidad)) {
+        //Se busca el precio en el CATALOGO usando el ID
+        if (CATALOGO[productoId] && cantidad > 0) {
+            const precio = CATALOGO[productoId].precio;
+            
             totalSinDescuento += precio * cantidad;
             productosCompra.push({ precio, cantidad });
         }
@@ -209,16 +263,35 @@ const calcularTotal = () => {
     });
 
     const totalFinal = totalSinDescuento - mejorDescuento;
-    const descuentoDe = mejorDescuento;
 
+    //ACTUALIZACIÓN DEL DOM
     document.getElementById('total-sin-descuento').textContent = formatearMoneda(totalSinDescuento);
-    document.getElementById('descuento-aplicado').textContent = mejorPromoDescripcion;    document.getElementById('total-final').textContent = formatearMoneda(totalFinal);
-    document.getElementById('descuento-de').textContent = formatearMoneda(descuentoDe);
+    
+    //Se muestra la promoción aplicada
+    const elemPromo = document.getElementById('descuento-aplicado');
+
+    if (mejorDescuento > 0) {
+
+        elemPromo.textContent = "✅ " + mejorPromoDescripcion;
+        elemPromo.style.color = "#2aa848"; //Verde para indicar éxito
+        elemPromo.style.fontWeight = "bold";
+
+    } else {
+
+        elemPromo.textContent = "Sin promociones aplicables";
+        elemPromo.style.color = "#685A73";
+        elemPromo.style.fontWeight = "normal";
+    }
+
+    document.getElementById('total-final').textContent = formatearMoneda(totalFinal);
+    document.getElementById('descuento-de').textContent = formatearMoneda(mejorDescuento);
 };
 
+//Inicialización
 document.addEventListener('DOMContentLoaded', () => {
     const listaPromosHTML = document.getElementById('lista-promociones');
     listaPromosHTML.innerHTML = '<ul>' + PROMOCIONES.map(p => `<li>${p.descripcion}</li>`).join('') + '</ul>';
     
-    calcularTotal();
+    //Agrega la primera fila automáticamente al cargar
+    agregarProducto(); 
 });

@@ -11,8 +11,9 @@
 .hero-product h1{
     font-size: 10rem;
     font-family: "Cormorant Garamond";
-    color: #2C2C2C;
+    color: var(--texto);
     padding: 10px 20px;
+    background: var(--bg-hero);
 }
 
 /*PROMOCIONES*/
@@ -22,7 +23,7 @@
 }
 
 .seccion-principal h2 {
-    color: #6B5A73;
+    color: var(--texto);
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 40px;
@@ -44,46 +45,43 @@
 }
 
 #lista-promociones li {
-    background-color: #c0a0ff;
+    background-color: var(--bg-banner);
     padding: 20px;
     border-radius: 8px;
     font-weight: bold;
     font-size: 1.8rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border: 2px solid #6B5A73;
+    box-shadow: 0 2px 5px var(--shadow);
+    border: 2px solid var(--borde);
 }
 
 /*CALCULADORA*/
 
 #formulario-productos {
-    max-width: 1000px;
+    max-width: 1400px;
     margin: 40px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    box-shadow: 0 0 15px var(--shadow);
+    font-size: 1.8rem;
 }
 
 #formulario-productos h3 {
-    color: #6B5A73;
+    color: var(--texto);
     margin-bottom: 25px;
     font-size: 2rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--borde-card);
     padding-bottom: 10px;
-}
-
-#formulario-productos button:hover{
-    transform: scale(1.1);
 }
 
 /*TABLA*/
 .producto-fila { 
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--borde-card);
 }
 
 .producto-fila label {
@@ -91,21 +89,24 @@
     flex-shrink: 0;
 }
 
-/*SELECTOR Y INPUT*/
-.producto-fila select { 
-    padding: 10px; 
-    border-radius: 4px; 
+/*SELECTOR E INPUT*/
+
+.producto-fila select{
+    padding: 15px;
+    font-size: 1.5rem;
+    border-radius: 8px;
     flex-grow: 1;
-    min-width: 150px;
+    border: 1px solid var(--borde-btn);
 }
 
 .producto-fila input.input-cantidad {
     padding: 10px; 
-    border-radius: 4px; 
-    width: 70px;
+    font-size: 1.5rem; 
+    border-radius: 8px;
+    border: 1px solid var(--borde-btn);
+    width: 8rem;
     text-align: center;
     flex-shrink: 0;
-    margin-right: 5px;
 }
 
 .producto-fila:last-of-type {
@@ -116,69 +117,96 @@
     font-size: 1.5rem;
 }
 
-#formulario-productos button {
-    background-color: #C6B5E9;
-    border: none;
-    padding: 10px 20px;
+
+/*IMAGEN DEL PRODUCTO*/
+.img-preview {
+    width: 20%;
+    height: auto;
+    object-fit: cover; /*Para que la imagen no se deforme*/
     border-radius: 4px;
+    border: 2px solid var(--lila);
+    margin-right: 15px;
+    background-color: var(--bg-body);
+}
+
+.producto-fila {
+    align-items: center;
+}
+
+/*BOTÓN DE AGREGAR OTRO PRODUCTO*/
+
+#formulario-productos button{
+    background-color: var(--nav-btn);
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
     cursor: pointer;
     font-weight: bold;
+    transition: .4s;
+    font-size: 1.6rem;
+}
+
+#formulario-productos button:hover{
+    background-color: var(--lila);
+    border: 1px solid var(--borde-btn);
+    transform: scale(1.1);
+    transition: .4s;
 }
 
 /*BOTÓN DE ELIMINAR*/
 .btn-eliminar {
-    background-color: #A7C7E7;
-    border: 1px solid #6B5A73;
-    padding: 0;
-    width: 30px;
-    height: 30px;
-    border-radius: 4px;
     cursor: pointer;
-    font-weight: bold;
-    font-size: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
+    background-color: var(--nav-btn);
+    border: 1px solid var(--borde-btn);
+    margin-top: 2.8rem; /*Para que este alineado con el de cantidad*/
+    width: 5rem;
+    height: auto;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: .4s;
 }
 
 .btn-eliminar:hover {
-    background-color: #6B5A73;
-    color: #F7F7F7;
-    transform: none;
+    background-color: var(--lila);
+    transform: scale(1.1);
+    transition: .4s; /*Movimiento smooth para cuando está el cursor encima*/
 }
 
 /*SECCIÓN RESUMEN DE COMPRA*/
 #resultados-calculo {
-    max-width: 600px;
+    max-width: 110rem;
     margin: 10px auto;
     padding: 25px;
-    background-color: #F0E2F7;
+    background-color: var(--bg-card);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    color: #2C2C2C;
+    box-shadow: 0 4px 8px var(--shadow);
+    color: var(--texto-principal);
 }
 
 #resultados-calculo h3 {
-    border-bottom: 1px solid #6B5A73;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
+    font-size: 2rem;
+    border-bottom: 1px solid var(--borde);
+    padding-bottom: 0.6rem;
+    margin-bottom: 2rem;
 }
 
 #resultados-calculo p {
     display: flex;
     justify-content: space-between;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 8px;
 }
 
 .total-final { 
-    font-size: 1.8rem; 
+    font-size: 2rem; 
     font-weight: bold; 
-    color: #6B5A73;
-    padding-top: 10px;
-    margin-top: 10px;
-    border-top: 1px solid rgba(107, 90, 115, 0.5);
+    color: var(--texto);
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--shadow);
 }
 
 .total-final span {
